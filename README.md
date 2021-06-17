@@ -4,6 +4,8 @@
 ![image]({https://img.shields.io/badge/Swift-FA7343?style=for-the-badge&logo=swift&logoColor=white})
 ![image]({https://img.shields.io/badge/Xcode-007ACC?style=flat-square&logo=Xcode&logoColor=white})
 
+<img src="{https://img.shields.io/badge/Xcode-007ACC?style=flat-square&logo=Xcode&logoColor=white}"/>
+
 ### Useful links:
 
 - [Exercises](https://drive.google.com/drive/u/1/folders/13Kp14CsyYY8pQ-_jmmu-R8qs7lSALqqf)
