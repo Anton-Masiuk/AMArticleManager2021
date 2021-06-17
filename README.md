@@ -4,9 +4,11 @@
 ![image]({https://img.shields.io/badge/Swift-FA7343?style=for-the-badge&logo=swift&logoColor=white})
 ![image]({https://img.shields.io/badge/Xcode-007ACC?style=flat-square&logo=Xcode&logoColor=white})
 
-<img src="{https://img.shields.io/badge/Xcode-007ACC?style=flat-square&logo=Xcode&logoColor=white}"/>
 
-<img src="https://img.shields.io/badge/WhatsApp-25D366?style=for-the-badge&logo=whatsapp&logoColor=white" /> | `https://img.shields.io/badge/WhatsApp-25D366?style=for-the-badge&logo=whatsapp&logoColor=white`
+
+<img src="https://img.shields.io/badge/iOS-000000?style=for-the-badge&logo=ios&logoColor=white" /> | `1`
+<img src="https://img.shields.io/badge/Swift-FA7343?style=for-the-badge&logo=swift&logoColor=white" /> | `2`
+<img src="https://img.shields.io/badge/Xcode-007ACC?style=flat-square&logo=Xcode&logoColor=white" /> | `3`
 
 ### Useful links:
 
