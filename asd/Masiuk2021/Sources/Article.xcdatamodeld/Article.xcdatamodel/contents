@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="19141.11" systemVersion="20F71" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Content" representedClassName="Content" syncable="YES" codeGenerationType="class"/>
+    <entity name="CreationDate" representedClassName="CreationDate" syncable="YES" codeGenerationType="class"/>
+    <entity name="Image" representedClassName="Image" syncable="YES" codeGenerationType="class"/>
+    <entity name="Language" representedClassName="Language" syncable="YES" codeGenerationType="class"/>
+    <entity name="ModificationDate" representedClassName="ModificationDate" syncable="YES" codeGenerationType="class"/>
+    <entity name="Title" representedClassName="Title" syncable="YES" codeGenerationType="class"/>
+    <elements>
+        <element name="Title" positionX="-63" positionY="-18" width="128" height="29"/>
+        <element name="Content" positionX="-54" positionY="-9" width="128" height="29"/>
+        <element name="Language" positionX="-36" positionY="9" width="128" height="29"/>
+        <element name="Image" positionX="-18" positionY="27" width="128" height="29"/>
+        <element name="CreationDate" positionX="0" positionY="45" width="128" height="29"/>
+        <element name="ModificationDate" positionX="18" positionY="63" width="128" height="29"/>
+    </elements>
+</model>

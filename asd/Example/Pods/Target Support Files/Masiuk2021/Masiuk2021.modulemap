@@ -1,0 +1,6 @@
+framework module Masiuk2021 {
+  umbrella header "Masiuk2021-umbrella.h"
+
+  export *
+  module * { export * }
+}

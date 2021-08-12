@@ -1,0 +1,649 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		199003B01D1FE5B5531CA847648B8412 /* Pods-Masiuk2021_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 077315495FBD89A4B6B0049BDEF6D0BE /* Pods-Masiuk2021_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		52FCFCAC88F801CC9BDAF4D5CAD5CB99 /* Masiuk2021-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = A895E63BEEC2312660D91B8281B9D1A4 /* Masiuk2021-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		73E478F6508037373B444992AB65E86E /* Masiuk2021-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 370967562E9E202756F4AB0B431B794A /* Masiuk2021-dummy.m */; };
+		9C9F0F9B52AA8D96B15C4E03A4645F9E /* Pods-Masiuk2021_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F1BA23F9BC44A7C0914A416E938CDCB /* Pods-Masiuk2021_Example-dummy.m */; };
+		AE461256DCAF72C3F5CE817C7EFED727 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		E608A0BC744EC60ADCBB73A59B400AAC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F53CEC176DA6A53F40ECD3F7C3F52C2D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F61A093C060612BD6838F8953C28AA42;
+			remoteInfo = Masiuk2021;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		077315495FBD89A4B6B0049BDEF6D0BE /* Pods-Masiuk2021_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Masiuk2021_Example-umbrella.h"; sourceTree = "<group>"; };
+		09DFBCCF851E5799431C64E3565D725F /* Masiuk2021-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Masiuk2021-prefix.pch"; sourceTree = "<group>"; };
+		2B0992EEF9BD8A255C83FEB796DD477A /* Pods-Masiuk2021_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Masiuk2021_Example-acknowledgements.plist"; sourceTree = "<group>"; };
+		2D71294683A5F58A524BAF653F851096 /* Masiuk2021.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = Masiuk2021.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		370967562E9E202756F4AB0B431B794A /* Masiuk2021-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Masiuk2021-dummy.m"; sourceTree = "<group>"; };
+		3C2E112CC15696BF9C64547FAEEAA14D /* Pods-Masiuk2021_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Masiuk2021_Example.modulemap"; sourceTree = "<group>"; };
+		3DAA870CCDD402408FC78295AA42E2E0 /* Pods-Masiuk2021_Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Masiuk2021_Example-Info.plist"; sourceTree = "<group>"; };
+		73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		738C08304CEEFFBC471B3D3DEDC45680 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		7AFAB07958CE8C5402E74A4A885CBD8B /* Pods-Masiuk2021_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Masiuk2021_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		7F1BA23F9BC44A7C0914A416E938CDCB /* Pods-Masiuk2021_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Masiuk2021_Example-dummy.m"; sourceTree = "<group>"; };
+		7F837BA4DFF072E0A314574A1BD9F67F /* Masiuk2021.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Masiuk2021.release.xcconfig; sourceTree = "<group>"; };
+		84AE8D33727F49BD803CE921A8807A23 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		86DDE647E547B7ED3368DF1ED7546827 /* Masiuk2021-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Masiuk2021-Info.plist"; sourceTree = "<group>"; };
+		93E52EA8E0399C803C9199407BEB215F /* Masiuk2021.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = Masiuk2021.modulemap; sourceTree = "<group>"; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		A3DAB005CF2B84DE2D7D01D697B346C9 /* Masiuk2021.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Masiuk2021.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A895E63BEEC2312660D91B8281B9D1A4 /* Masiuk2021-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Masiuk2021-umbrella.h"; sourceTree = "<group>"; };
+		C27EECAA282092B680B0411567EAB749 /* Pods_Masiuk2021_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Masiuk2021_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C4C68CF40F53EC5C3A72B87565640C48 /* Pods-Masiuk2021_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Masiuk2021_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
+		CA50D297C3C78FB4B19331D4F9701DD5 /* Masiuk2021.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Masiuk2021.debug.xcconfig; sourceTree = "<group>"; };
+		CE97940926C54C10007D8946 /* ArticleManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleManager.swift; sourceTree = "<group>"; };
+		CE97940B26C54C10007D8946 /* Article.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Article.xcdatamodel; sourceTree = "<group>"; };
+		CE97940C26C54C10007D8946 /* Article.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Article.swift; sourceTree = "<group>"; };
+		F3231B5B3544C7A1B21455C5BF60F0B4 /* Pods-Masiuk2021_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Masiuk2021_Example-frameworks.sh"; sourceTree = "<group>"; };
+		F716DC229CC970798B82C13A165B42D2 /* Pods-Masiuk2021_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Masiuk2021_Example.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		32FEC3C7A012AB071C0B3136EB879A26 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AE461256DCAF72C3F5CE817C7EFED727 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		46A70F14725B51D27E855E569E374CA7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E608A0BC744EC60ADCBB73A59B400AAC /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0874FEDD0C9FB4BB21E6946B5F589280 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A3DAB005CF2B84DE2D7D01D697B346C9 /* Masiuk2021.framework */,
+				C27EECAA282092B680B0411567EAB749 /* Pods_Masiuk2021_Example.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1BBD5565F3AE5B5EDB929395CDEBE9B9 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				93E52EA8E0399C803C9199407BEB215F /* Masiuk2021.modulemap */,
+				370967562E9E202756F4AB0B431B794A /* Masiuk2021-dummy.m */,
+				86DDE647E547B7ED3368DF1ED7546827 /* Masiuk2021-Info.plist */,
+				09DFBCCF851E5799431C64E3565D725F /* Masiuk2021-prefix.pch */,
+				A895E63BEEC2312660D91B8281B9D1A4 /* Masiuk2021-umbrella.h */,
+				CA50D297C3C78FB4B19331D4F9701DD5 /* Masiuk2021.debug.xcconfig */,
+				7F837BA4DFF072E0A314574A1BD9F67F /* Masiuk2021.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/Masiuk2021";
+			sourceTree = "<group>";
+		};
+		23D6B2B8CB51381F1440AFB6FEF87065 /* Pod */ = {
+			isa = PBXGroup;
+			children = (
+				CE97940826C54C10007D8946 /* Sources */,
+				738C08304CEEFFBC471B3D3DEDC45680 /* LICENSE */,
+				2D71294683A5F58A524BAF653F851096 /* Masiuk2021.podspec */,
+				84AE8D33727F49BD803CE921A8807A23 /* README.md */,
+				CE97940726C546E9007D8946 /* Classes */,
+			);
+			name = Pod;
+			sourceTree = "<group>";
+		};
+		455FF0005E6789439A7574041321611B /* Masiuk2021 */ = {
+			isa = PBXGroup;
+			children = (
+				23D6B2B8CB51381F1440AFB6FEF87065 /* Pod */,
+				1BBD5565F3AE5B5EDB929395CDEBE9B9 /* Support Files */,
+			);
+			name = Masiuk2021;
+			path = ../..;
+			sourceTree = "<group>";
+		};
+		4926C061998198C30CCB26D6842FF6C1 /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				455FF0005E6789439A7574041321611B /* Masiuk2021 */,
+			);
+			name = "Development Pods";
+			sourceTree = "<group>";
+		};
+		50A0E8C794C66428B04A6E10D55D49A2 /* Pods-Masiuk2021_Example */ = {
+			isa = PBXGroup;
+			children = (
+				3C2E112CC15696BF9C64547FAEEAA14D /* Pods-Masiuk2021_Example.modulemap */,
+				C4C68CF40F53EC5C3A72B87565640C48 /* Pods-Masiuk2021_Example-acknowledgements.markdown */,
+				2B0992EEF9BD8A255C83FEB796DD477A /* Pods-Masiuk2021_Example-acknowledgements.plist */,
+				7F1BA23F9BC44A7C0914A416E938CDCB /* Pods-Masiuk2021_Example-dummy.m */,
+				F3231B5B3544C7A1B21455C5BF60F0B4 /* Pods-Masiuk2021_Example-frameworks.sh */,
+				3DAA870CCDD402408FC78295AA42E2E0 /* Pods-Masiuk2021_Example-Info.plist */,
+				077315495FBD89A4B6B0049BDEF6D0BE /* Pods-Masiuk2021_Example-umbrella.h */,
+				7AFAB07958CE8C5402E74A4A885CBD8B /* Pods-Masiuk2021_Example.debug.xcconfig */,
+				F716DC229CC970798B82C13A165B42D2 /* Pods-Masiuk2021_Example.release.xcconfig */,
+			);
+			name = "Pods-Masiuk2021_Example";
+			path = "Target Support Files/Pods-Masiuk2021_Example";
+			sourceTree = "<group>";
+		};
+		578452D2E740E91742655AC8F1636D1F /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		CE97940726C546E9007D8946 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		CE97940826C54C10007D8946 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				CE97940926C54C10007D8946 /* ArticleManager.swift */,
+				CE97940A26C54C10007D8946 /* Article.xcdatamodeld */,
+				CE97940C26C54C10007D8946 /* Article.swift */,
+			);
+			name = Sources;
+			path = Masiuk2021/Sources;
+			sourceTree = "<group>";
+		};
+		CF1408CF629C7361332E53B88F7BD30C = {
+			isa = PBXGroup;
+			children = (
+				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
+				4926C061998198C30CCB26D6842FF6C1 /* Development Pods */,
+				D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */,
+				0874FEDD0C9FB4BB21E6946B5F589280 /* Products */,
+				FA3E3EFD1C1A1A80339D9B7C052C6EBF /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				578452D2E740E91742655AC8F1636D1F /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FA3E3EFD1C1A1A80339D9B7C052C6EBF /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				50A0E8C794C66428B04A6E10D55D49A2 /* Pods-Masiuk2021_Example */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		46589F578D1CE4502F244A82B53FD5F8 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				52FCFCAC88F801CC9BDAF4D5CAD5CB99 /* Masiuk2021-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A5D9CA04A6BD47625022E4291B87B565 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				199003B01D1FE5B5531CA847648B8412 /* Pods-Masiuk2021_Example-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		7D755F3738AB23BD970E5FC63AE6347B /* Pods-Masiuk2021_Example */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A99863A9D57D0E79FC7E4506D183D0AC /* Build configuration list for PBXNativeTarget "Pods-Masiuk2021_Example" */;
+			buildPhases = (
+				A5D9CA04A6BD47625022E4291B87B565 /* Headers */,
+				56DDC2318C7ACC9CE0B69B29709EA51F /* Sources */,
+				46A70F14725B51D27E855E569E374CA7 /* Frameworks */,
+				951A0B0D32505750A4CDCD7007892D19 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3DB266EC4C154164744154999D320B05 /* PBXTargetDependency */,
+			);
+			name = "Pods-Masiuk2021_Example";
+			productName = "Pods-Masiuk2021_Example";
+			productReference = C27EECAA282092B680B0411567EAB749 /* Pods_Masiuk2021_Example.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		F61A093C060612BD6838F8953C28AA42 /* Masiuk2021 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AEC437464E3B3348403CF79957EF0302 /* Build configuration list for PBXNativeTarget "Masiuk2021" */;
+			buildPhases = (
+				46589F578D1CE4502F244A82B53FD5F8 /* Headers */,
+				20ACB32F0373B1BE8516B5AEA51DE057 /* Sources */,
+				32FEC3C7A012AB071C0B3136EB879A26 /* Frameworks */,
+				0BC978B78F7A8D19BD021CEB9BDBEBE7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Masiuk2021;
+			productName = Masiuk2021;
+			productReference = A3DAB005CF2B84DE2D7D01D697B346C9 /* Masiuk2021.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BFDFE7DC352907FC980B868725387E98 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1100;
+				LastUpgradeCheck = 1250;
+				TargetAttributes = {
+					7D755F3738AB23BD970E5FC63AE6347B = {
+						LastSwiftMigration = 1250;
+					};
+					F61A093C060612BD6838F8953C28AA42 = {
+						LastSwiftMigration = 1250;
+					};
+				};
+			};
+			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
+			productRefGroup = 0874FEDD0C9FB4BB21E6946B5F589280 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F61A093C060612BD6838F8953C28AA42 /* Masiuk2021 */,
+				7D755F3738AB23BD970E5FC63AE6347B /* Pods-Masiuk2021_Example */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		0BC978B78F7A8D19BD021CEB9BDBEBE7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		951A0B0D32505750A4CDCD7007892D19 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		20ACB32F0373B1BE8516B5AEA51DE057 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				73E478F6508037373B444992AB65E86E /* Masiuk2021-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		56DDC2318C7ACC9CE0B69B29709EA51F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9C9F0F9B52AA8D96B15C4E03A4645F9E /* Pods-Masiuk2021_Example-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3DB266EC4C154164744154999D320B05 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Masiuk2021;
+			target = F61A093C060612BD6838F8953C28AA42 /* Masiuk2021 */;
+			targetProxy = F53CEC176DA6A53F40ECD3F7C3F52C2D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		0858D091C8D6DD925CC8F75F33915153 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7AFAB07958CE8C5402E74A4A885CBD8B /* Pods-Masiuk2021_Example.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_MODULES = YES;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-Masiuk2021_Example/Pods-Masiuk2021_Example-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Masiuk2021_Example/Pods-Masiuk2021_Example.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		1416E626F295984807BA0CE8FF034259 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CA50D297C3C78FB4B19331D4F9701DD5 /* Masiuk2021.debug.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/Masiuk2021/Masiuk2021-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Masiuk2021/Masiuk2021-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Masiuk2021/Masiuk2021.modulemap";
+				PRODUCT_MODULE_NAME = Masiuk2021;
+				PRODUCT_NAME = Masiuk2021;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		25AD9454612BF454A1E3DC4CD4FA8C6D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		40AB867268D88C42F91A3ADFEA224542 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F716DC229CC970798B82C13A165B42D2 /* Pods-Masiuk2021_Example.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_MODULES = YES;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-Masiuk2021_Example/Pods-Masiuk2021_Example-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Masiuk2021_Example/Pods-Masiuk2021_Example.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		661534A9E07A1EEF18632AB03CF7BB4A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7F837BA4DFF072E0A314574A1BD9F67F /* Masiuk2021.release.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/Masiuk2021/Masiuk2021-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Masiuk2021/Masiuk2021-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Masiuk2021/Masiuk2021.modulemap";
+				PRODUCT_MODULE_NAME = Masiuk2021;
+				PRODUCT_NAME = Masiuk2021;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		CA547D2C7E9A8A153DC2B27FBE00B112 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				25AD9454612BF454A1E3DC4CD4FA8C6D /* Debug */,
+				CA547D2C7E9A8A153DC2B27FBE00B112 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A99863A9D57D0E79FC7E4506D183D0AC /* Build configuration list for PBXNativeTarget "Pods-Masiuk2021_Example" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0858D091C8D6DD925CC8F75F33915153 /* Debug */,
+				40AB867268D88C42F91A3ADFEA224542 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AEC437464E3B3348403CF79957EF0302 /* Build configuration list for PBXNativeTarget "Masiuk2021" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1416E626F295984807BA0CE8FF034259 /* Debug */,
+				661534A9E07A1EEF18632AB03CF7BB4A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		CE97940A26C54C10007D8946 /* Article.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				CE97940B26C54C10007D8946 /* Article.xcdatamodel */,
+			);
+			currentVersion = CE97940B26C54C10007D8946 /* Article.xcdatamodel */;
+			path = Article.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+}

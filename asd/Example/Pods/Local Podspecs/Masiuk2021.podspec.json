@@ -1,0 +1,22 @@
+{
+  "name": "Masiuk2021",
+  "version": "0.1.0",
+  "summary": "A short description of Masiuk2021.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/Anton Masiuk/Masiuk2021",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "Anton Masiuk": "anton.masiuk@codeit.pro"
+  },
+  "source": {
+    "git": "https://github.com/Anton Masiuk/Masiuk2021.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "9.0"
+  },
+  "source_files": "Masiuk2021/Classes/**/*"
+}

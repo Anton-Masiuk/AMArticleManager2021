@@ -1,0 +1,16 @@
+PODS:
+  - Masiuk2021 (0.1.0)
+
+DEPENDENCIES:
+  - Masiuk2021 (from `../`)
+
+EXTERNAL SOURCES:
+  Masiuk2021:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  Masiuk2021: 656ada8754ba8aea579715e2d3252a332a10ddaa
+
+PODFILE CHECKSUM: 3b6f96149d913276d8a2ea8832978faf77c552d6
+
+COCOAPODS: 1.10.1
