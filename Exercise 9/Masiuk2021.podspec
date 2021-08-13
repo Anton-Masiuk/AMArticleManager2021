@@ -25,9 +25,9 @@ Pod::Spec.new do |s|
 
   s.homepage         = 'https://github.com/Anton-Masiuk/Masiuk2021'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
-  s.source           = { :git => 'https://github.com/Anton Masiuk/Masiuk2021.git', :tag => s.version.to_s }
+  s.source           = { :git => 'https://github.com/Anton-Masiuk/Masiuk2021.git', :tag => s.version.to_s }
   s.ios.deployment_target = '12.0'
-  s.source_files = 'Masiuk2021/Sources/*'
+  s.source_files = 'Masiuk2021/Source Files/*'
 	s.frameworks = 'CoreData'
 	s.swift_versions = '5'
 end
