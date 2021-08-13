@@ -7,9 +7,12 @@
 //
 
 import UIKit
+import Masiuk2021
 
 class ViewController: UIViewController {
 
+	let manager = a
+		
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
