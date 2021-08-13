@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--AddArticle-->
+        <scene sceneID="Erx-8m-Pzs">
+            <objects>
+                <viewController storyboardIdentifier="AddArticleViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="fJb-dU-VKg" userLabel="AddArticle" customClass="AddArticleViewController" customModule="Masiuk2021_Example" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="jRv-Ty-ACH">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Article's title" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Mxc-rW-2kj">
+                                <rect key="frame" x="16" y="52" width="382" height="40"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.14973169443558673" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="LNe-bw-OrA"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="8eN-gi-AxW">
+                                <rect key="frame" x="16" y="100" width="382" height="179"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.1497316944" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <accessibility key="accessibilityConfiguration" hint="victim's last minutes">
+                                    <accessibilityTraits key="traits" none="YES"/>
+                                </accessibility>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="done"/>
+                            </textView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="kgW-Le-bLv"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Mxc-rW-2kj" firstAttribute="top" secondItem="kgW-Le-bLv" secondAttribute="top" constant="8" id="5oh-hN-qeC"/>
+                            <constraint firstItem="Mxc-rW-2kj" firstAttribute="leading" secondItem="kgW-Le-bLv" secondAttribute="leading" constant="16" id="Byl-3I-8In"/>
+                            <constraint firstItem="Mxc-rW-2kj" firstAttribute="centerX" secondItem="kgW-Le-bLv" secondAttribute="centerX" id="RL0-No-ASN"/>
+                            <constraint firstItem="8eN-gi-AxW" firstAttribute="height" secondItem="jRv-Ty-ACH" secondAttribute="height" multiplier="0.2" id="V8g-fe-rJ2"/>
+                            <constraint firstItem="8eN-gi-AxW" firstAttribute="leading" secondItem="kgW-Le-bLv" secondAttribute="leading" constant="16" id="W1s-pv-YdQ"/>
+                            <constraint firstItem="8eN-gi-AxW" firstAttribute="top" secondItem="Mxc-rW-2kj" secondAttribute="bottom" constant="8" id="oy4-r1-54G"/>
+                            <constraint firstItem="8eN-gi-AxW" firstAttribute="centerX" secondItem="kgW-Le-bLv" secondAttribute="centerX" id="vmO-My-ZFh"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Add a Person" id="IIc-Ev-qG9"/>
+                    <connections>
+                        <outlet property="contentTextView" destination="8eN-gi-AxW" id="VaH-hf-HMu"/>
+                        <outlet property="titleTextField" destination="Mxc-rW-2kj" id="u08-8p-uES"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Qja-vX-bzR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="15.942028985507248" y="133.92857142857142"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

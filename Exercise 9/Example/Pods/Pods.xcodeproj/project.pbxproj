@@ -12,6 +12,12 @@
 		73E478F6508037373B444992AB65E86E /* Masiuk2021-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 370967562E9E202756F4AB0B431B794A /* Masiuk2021-dummy.m */; };
 		9C9F0F9B52AA8D96B15C4E03A4645F9E /* Pods-Masiuk2021_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F1BA23F9BC44A7C0914A416E938CDCB /* Pods-Masiuk2021_Example-dummy.m */; };
 		AE461256DCAF72C3F5CE817C7EFED727 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		CE9929FD26C6731900A9AB61 /* ArticleManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9929F926C6731900A9AB61 /* ArticleManager.swift */; };
+		CE9929FE26C6731900A9AB61 /* ArticleManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9929F926C6731900A9AB61 /* ArticleManager.swift */; };
+		CE9929FF26C6731900A9AB61 /* Article.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CE9929FA26C6731900A9AB61 /* Article.xcdatamodeld */; };
+		CE992A0026C6731900A9AB61 /* Article.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CE9929FA26C6731900A9AB61 /* Article.xcdatamodeld */; };
+		CE992A0126C6731900A9AB61 /* Article.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9929FC26C6731900A9AB61 /* Article.swift */; };
+		CE992A0226C6731900A9AB61 /* Article.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9929FC26C6731900A9AB61 /* Article.swift */; };
 		E608A0BC744EC60ADCBB73A59B400AAC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
 /* End PBXBuildFile section */
 
@@ -47,9 +53,9 @@
 		C27EECAA282092B680B0411567EAB749 /* Pods_Masiuk2021_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Masiuk2021_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4C68CF40F53EC5C3A72B87565640C48 /* Pods-Masiuk2021_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Masiuk2021_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
 		CA50D297C3C78FB4B19331D4F9701DD5 /* Masiuk2021.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Masiuk2021.debug.xcconfig; sourceTree = "<group>"; };
-		CE97940926C54C10007D8946 /* ArticleManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleManager.swift; sourceTree = "<group>"; };
-		CE97940B26C54C10007D8946 /* Article.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Article.xcdatamodel; sourceTree = "<group>"; };
-		CE97940C26C54C10007D8946 /* Article.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Article.swift; sourceTree = "<group>"; };
+		CE9929F926C6731900A9AB61 /* ArticleManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticleManager.swift; sourceTree = "<group>"; };
+		CE9929FB26C6731900A9AB61 /* Article.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Article.xcdatamodel; sourceTree = "<group>"; };
+		CE9929FC26C6731900A9AB61 /* Article.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Article.swift; sourceTree = "<group>"; };
 		F3231B5B3544C7A1B21455C5BF60F0B4 /* Pods-Masiuk2021_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Masiuk2021_Example-frameworks.sh"; sourceTree = "<group>"; };
 		F716DC229CC970798B82C13A165B42D2 /* Pods-Masiuk2021_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Masiuk2021_Example.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -101,7 +107,7 @@
 		23D6B2B8CB51381F1440AFB6FEF87065 /* Pod */ = {
 			isa = PBXGroup;
 			children = (
-				CE97940826C54C10007D8946 /* Sources */,
+				CE9929F826C6731900A9AB61 /* Source Files */,
 				738C08304CEEFFBC471B3D3DEDC45680 /* LICENSE */,
 				2D71294683A5F58A524BAF653F851096 /* Masiuk2021.podspec */,
 				84AE8D33727F49BD803CE921A8807A23 /* README.md */,
@@ -160,15 +166,15 @@
 			name = Classes;
 			sourceTree = "<group>";
 		};
-		CE97940826C54C10007D8946 /* Sources */ = {
+		CE9929F826C6731900A9AB61 /* Source Files */ = {
 			isa = PBXGroup;
 			children = (
-				CE97940926C54C10007D8946 /* ArticleManager.swift */,
-				CE97940A26C54C10007D8946 /* Article.xcdatamodeld */,
-				CE97940C26C54C10007D8946 /* Article.swift */,
+				CE9929F926C6731900A9AB61 /* ArticleManager.swift */,
+				CE9929FA26C6731900A9AB61 /* Article.xcdatamodeld */,
+				CE9929FC26C6731900A9AB61 /* Article.swift */,
 			);
-			name = Sources;
-			path = Masiuk2021/Sources;
+			name = "Source Files";
+			path = "Masiuk2021/Source Files";
 			sourceTree = "<group>";
 		};
 		CF1408CF629C7361332E53B88F7BD30C = {
@@ -315,7 +321,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE992A0126C6731900A9AB61 /* Article.swift in Sources */,
+				CE9929FD26C6731900A9AB61 /* ArticleManager.swift in Sources */,
 				73E478F6508037373B444992AB65E86E /* Masiuk2021-dummy.m in Sources */,
+				CE9929FF26C6731900A9AB61 /* Article.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -323,7 +332,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE992A0226C6731900A9AB61 /* Article.swift in Sources */,
+				CE9929FE26C6731900A9AB61 /* ArticleManager.swift in Sources */,
 				9C9F0F9B52AA8D96B15C4E03A4645F9E /* Pods-Masiuk2021_Example-dummy.m in Sources */,
+				CE992A0026C6731900A9AB61 /* Article.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -633,12 +645,12 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		CE97940A26C54C10007D8946 /* Article.xcdatamodeld */ = {
+		CE9929FA26C6731900A9AB61 /* Article.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				CE97940B26C54C10007D8946 /* Article.xcdatamodel */,
+				CE9929FB26C6731900A9AB61 /* Article.xcdatamodel */,
 			);
-			currentVersion = CE97940B26C54C10007D8946 /* Article.xcdatamodel */;
+			currentVersion = CE9929FB26C6731900A9AB61 /* Article.xcdatamodel */;
 			path = Article.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;

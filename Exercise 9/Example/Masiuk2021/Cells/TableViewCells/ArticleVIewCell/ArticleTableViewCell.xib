@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="ArticleViewCell" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="ArticleCellReusableID" focusStyle="custom" rowHeight="111" id="KLy-dY-4hJ" customClass="ArticleTableViewCell" customModule="Masiuk2021_Example" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="111"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="KLy-dY-4hJ" id="CAq-TQ-5Zr">
+                <rect key="frame" x="0.0" y="0.0" width="414" height="111"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yk2-Dk-A3u">
+                        <rect key="frame" x="8" y="8" width="354" height="20.5"/>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="1000" text="Date" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tfE-fI-iP6">
+                        <rect key="frame" x="370" y="8" width="36" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Content" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y4o-iX-kbK">
+                        <rect key="frame" x="36" y="36.5" width="350" height="58.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                <constraints>
+                    <constraint firstItem="Y4o-iX-kbK" firstAttribute="top" secondItem="yk2-Dk-A3u" secondAttribute="bottom" constant="8" id="3ul-AE-2je"/>
+                    <constraint firstItem="tfE-fI-iP6" firstAttribute="top" secondItem="CAq-TQ-5Zr" secondAttribute="top" constant="8" id="AIZ-Z5-gFa"/>
+                    <constraint firstItem="yk2-Dk-A3u" firstAttribute="top" secondItem="CAq-TQ-5Zr" secondAttribute="top" constant="8" id="S0Z-l6-8NU"/>
+                    <constraint firstAttribute="bottom" secondItem="Y4o-iX-kbK" secondAttribute="bottom" constant="16" id="Y4k-FV-zUk"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="Y4o-iX-kbK" secondAttribute="trailing" constant="8" id="bEZ-JV-Ttk"/>
+                    <constraint firstAttribute="trailing" secondItem="tfE-fI-iP6" secondAttribute="trailing" constant="8" id="hAt-qb-z9z"/>
+                    <constraint firstItem="Y4o-iX-kbK" firstAttribute="leading" secondItem="CAq-TQ-5Zr" secondAttribute="leadingMargin" constant="16" id="ohJ-KX-Ybb"/>
+                    <constraint firstItem="tfE-fI-iP6" firstAttribute="leading" secondItem="yk2-Dk-A3u" secondAttribute="trailing" constant="8" id="s1f-55-eTN"/>
+                    <constraint firstItem="yk2-Dk-A3u" firstAttribute="leading" secondItem="CAq-TQ-5Zr" secondAttribute="leading" constant="8" id="unn-d8-tBq"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <connections>
+                <outlet property="contentLabel" destination="Y4o-iX-kbK" id="8KD-ES-fZL"/>
+                <outlet property="creationDateLabel" destination="tfE-fI-iP6" id="Gkz-o6-R3z"/>
+                <outlet property="titleLabel" destination="yk2-Dk-A3u" id="6rO-YA-CbO"/>
+            </connections>
+            <point key="canvasLocation" x="461" y="166"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
