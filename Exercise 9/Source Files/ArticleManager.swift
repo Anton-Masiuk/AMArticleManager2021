@@ -6,7 +6,6 @@
 //  Copyright © 2021 CocoaPods. All rights reserved.
 //
 
-import Foundation
 import CoreData
 
 // MARK: - Article Manager
@@ -19,43 +18,27 @@ public class ArticleManager {
 	
   // MARK: - Private Properties
   
-  private var articles: [Article] = []
-	private let container = NSPersistentContainer(name: "Article")
-	private var managedObjectContext: NSManagedObjectContext?
-	
-	private lazy var persistentContainer: NSPersistentContainer? = {
-		let modelURL = Bundle(for: ArticleManager.self).url(forResource: "Article", withExtension: "momd")
-		
-		guard let model = modelURL.flatMap(NSManagedObjectModel.init) else {
-			print("Fail to load the trigger model!")
-			return nil
-		}
-		
-		var container = NSPersistentContainer(name: "Article", managedObjectModel: model)
-		container.loadPersistentStores(completionHandler: { (storeDescription, error) in
-			if let error = error as NSError? {
-				print("Unresolved error \(error), \(error.userInfo)")
-			}
-		})
-		
-		return container
-	}()
-	
+	private var managedObjectContext: NSManagedObjectContext
+
 	// MARK: - Public Initializers
 	
-	public init?() {
-		managedObjectContext = persistentContainer?.viewContext
-		
-		guard managedObjectContext != nil else {
-			print("Cann't get right managed object context.")
-			return nil
+	public init() {
+		guard let modelURL = Bundle(for: ArticleManager.self).url(forResource: "Article", withExtension: "momd"),
+							let articleModel = NSManagedObjectModel(contentsOf: modelURL) else {
+					fatalError("Failed to find article model resource")
+				}
+		let persistentContainer = NSPersistentContainer(name: "Article", managedObjectModel: articleModel)
+		persistentContainer.loadPersistentStores { (storeDescription, error) in
+			if let error = error as NSError? {
+				fatalError(error.localizedDescription)
+			}
 		}
+		self.managedObjectContext = persistentContainer.viewContext
 	}
 	
   // MARK: - Public Methods
 	
 	public func newArticle(title: String, content: String, language: String, image: Data?) -> Article? {
-		if let managedObjectContext = managedObjectContext {
 			let entity = NSEntityDescription.entity(forEntityName: "Article", in: managedObjectContext)!
 			let article = NSManagedObject(entity: entity, insertInto: managedObjectContext)
 			article.setValue(title, forKeyPath: "title")
@@ -64,55 +47,51 @@ public class ArticleManager {
 			article.setValue(image, forKey: "image")
 			article.setValue(NSDate(), forKey: "creationDate")
 			article.setValue(NSDate(), forKey: "modificationDate")
-			do {
-				try managedObjectContext.save()
-				debugPrint(article)
-			} catch let error as NSError {
-				print("Could not save. \(error), \(error.userInfo)")
-			}
-//			articles.append(article as Article)
+			save()
 			return nil
-		}
-    return nil
-  }
-  
-	public func getAllArticles() -> [Article] {
-    return articles
   }
   
 	public func getArticles(with lang: String) -> [Article] {
-    return articles.filter { $0.language == lang }
+		let allArticles = getAllArticles()
+    return allArticles.filter { $0.language == lang }
   }
   
 	public func getArticles(contain str: String) -> [Article] {
-    return articles.filter {
+		let allArticles = getAllArticles()
+    return allArticles.filter {
       $0.content?.contains(str) ?? false
     }
   }
   
 	public func remove(article: Article) {
-    articles = articles.filter { $0 != article}
+		managedObjectContext.delete(article)
+		save()
   }
 	
-	public func loadArticles() -> [Article] {
-		
+	public func getAllArticles() -> [Article] {
 		let request = NSFetchRequest<NSFetchRequestResult>(entityName: "Article")
 		var array: [Article] = []
 		request.returnsObjectsAsFaults = false
 		do {
-			let result = try managedObjectContext?.fetch(request)
+			let result = try managedObjectContext.fetch(request)
 			for data in result as! [NSManagedObject] {
-				print(data.value(forKey: "title") as! String)
-				debugPrint(data.value(forKey: "content") as! String)
 				if let article = data as? Article {
 					array.append(article)
 				}
 			}
-			
 		} catch {
-			
-			print("Failed")
+			debugPrint("Failed to load articles")
 		}
 	return array
+	}
+	
+	// MARK: - Private Methods
+	
+	private func save() {
+		do {
+				try managedObjectContext.save()
+		} catch let error as NSError {
+			debugPrint("Failed to save changes in articles. \(error.localizedDescription)")
+		}
 	}
 }

@@ -35,7 +35,7 @@ class AddArticleViewController: UIViewController {
 	
 	private func setupViews() {
 		contentTextView.textContainer.lineBreakMode = .byTruncatingTail
-		navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Done", style: .plain,
+		navigationItem.rightBarButtonItem = UIBarButtonItem(title: Const.AddArticleViewController.barButtontitle, style: .plain,
 																												target: self, action: #selector(doneEditingNewNote))
 	}
 	
@@ -49,20 +49,20 @@ class AddArticleViewController: UIViewController {
 
 	private func validateAndCreateArticleModel() {
 		guard let title = titleTextField.text, title != "" else {
-			presentAlert(message: "Please enter article's title")
+			presentAlert(message: Const.AddArticleViewController.noTitleMessage)
 			return
 		}
 		guard let content = contentTextView.text, content != "" else {
-			presentAlert(message: "Please enter article's content")
+			presentAlert(message: Const.AddArticleViewController.noContentMessage)
 			return
 		}
-		let _ = ArticleManager.shared?.newArticle(title: title, content: content, language: "en", image: nil)
+		let _ = ArticleManager.shared.newArticle(title: title, content: content, language: Const.AddArticleViewController.language, image: nil)
 		navigationController?.popViewController(animated: true)
 	}
 	
 	private func presentAlert(message: String) {
 		let alert = UIAlertController(title: "", message: message, preferredStyle: .alert)
-		alert.addAction(UIAlertAction(title: "Ok", style: .cancel, handler: nil))
+		alert.addAction(UIAlertAction(title: Const.AddArticleViewController.alertActionTitle, style: .cancel, handler: nil))
 		present(alert, animated: true)
 	}
 }

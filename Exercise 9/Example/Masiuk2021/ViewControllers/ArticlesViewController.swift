@@ -9,6 +9,8 @@
 import UIKit
 import Masiuk2021
 
+// MARK: - Articles ViewController
+
 class ArticlesViewController: UIViewController {
 	
 	// MARK: - IBOutlets
@@ -17,7 +19,7 @@ class ArticlesViewController: UIViewController {
 	
 	// MARK: - Private Properties
 	
-	private let manager = ArticleManager.shared
+	private let articleManager = ArticleManager.shared
 	private var articles: [Article] = []
 	
 	// MARK: - ViewController Lifecycle Methods
@@ -31,10 +33,10 @@ class ArticlesViewController: UIViewController {
 	override func viewWillAppear(_ animated: Bool) {
 		super.viewWillAppear(animated)
 		
-		articles = manager?.loadArticles() ?? []
+		articles = articleManager.getAllArticles()
 		tableView.reloadData()
 	}
-
+	
 	// MARK: - Setup Methods
 	
 	private func setupSettings() {
@@ -62,8 +64,14 @@ class ArticlesViewController: UIViewController {
 		guard let articleDetailsViewController = UIStoryboard.articleDetailsViewController() else { return }
 		
 		articleDetailsViewController.articleeModel = articleModel
-		articleDetailsViewController.title = "\(articleModel.title ?? "no title")"
+		articleDetailsViewController.title = articleModel.title ?? Const.ArticleDetailsViewController.noTitleName
 		self.navigationController?.pushViewController(articleDetailsViewController, animated: true)
+	}
+	
+	private func remove(at index: IndexPath) {
+		let article = articles.remove(at: index.row)
+		articleManager.remove(article: article)
+		tableView.reloadData()
 	}
 }
 
@@ -74,6 +82,17 @@ extension ArticlesViewController: UITableViewDelegate {
 	internal func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 		let deathNoteModel = articles[indexPath.row]
 		pushDeathNoteDetailsViewController(with: deathNoteModel)
+	}
+	
+	internal func tableView(_ tableView: UITableView,
+								 trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+		let removeAction = UIContextualAction(style: .normal,
+																					title: Const.ArticleViewController.removeActionName) { [weak self] (action, view, completionHandler) in
+			self?.remove(at: indexPath)
+			completionHandler(true)
+		}
+		removeAction.backgroundColor = .systemRed
+		return UISwipeActionsConfiguration(actions: [removeAction])
 	}
 }
 
