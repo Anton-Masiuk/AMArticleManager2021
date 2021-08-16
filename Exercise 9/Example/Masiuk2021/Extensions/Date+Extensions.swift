@@ -7,13 +7,13 @@
 
 import Foundation
 
-extension NSDate {
+extension Date {
 	
 	// MARK: - Internal Properties
 	
 	internal func formattedString() -> String {
 		let formatter = DateFormatter()
 		formatter.dateFormat = Const.Global.dateFormat
-		return formatter.string(from: self as Date)
+		return formatter.string(from: self)
 	}
 }

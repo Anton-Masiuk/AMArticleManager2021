@@ -31,14 +31,13 @@ class ArticlesViewController: UIViewController {
 	override func viewWillAppear(_ animated: Bool) {
 		super.viewWillAppear(animated)
 		
-		articles = manager.getAllArticles()
+		articles = manager?.loadArticles() ?? []
 		tableView.reloadData()
 	}
 
 	// MARK: - Setup Methods
 	
 	private func setupSettings() {
-		setupArticles()
 		tableView.delegate = self
 		tableView.dataSource = self
 		tableView.register(UINib(nibName: Const.ArticleTableViewCell.nibName, bundle: nil),
@@ -48,11 +47,6 @@ class ArticlesViewController: UIViewController {
 				UIBarButtonItem(barButtonSystemItem: .add,target: self, action: #selector(pushAddNoteViewController))
 			navigationItem.rightBarButtonItem = addBarButtonItem
 		}
-	}
-	
-	private func setupArticles() {
-		let _ = manager.newArticle(title: "first article", content: "this is the first article", language: "en", image: nil)
-		let _ = manager.newArticle(title: "second article", content: "Another article with different content", language: "en", image: nil)
 	}
 	
 	// MARK: - Action Methods

@@ -28,6 +28,9 @@ Pod::Spec.new do |s|
   s.source           = { :git => 'https://github.com/Anton-Masiuk/Masiuk2021.git', :tag => s.version.to_s }
   s.ios.deployment_target = '12.0'
   s.source_files = 'Masiuk2021/Source Files/*'
+	s.resource_bundles = {
+		'Anton2021' => ['Anton2021/**/*.xcdatamodeld']
+	}
 	s.frameworks = 'CoreData'
 	s.swift_versions = '5'
 end

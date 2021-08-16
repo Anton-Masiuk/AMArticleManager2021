@@ -56,7 +56,7 @@ class AddArticleViewController: UIViewController {
 			presentAlert(message: "Please enter article's content")
 			return
 		}
-		let _ = ArticleManager.shared.newArticle(title: title, content: content, language: "en", image: nil)
+		let _ = ArticleManager.shared?.newArticle(title: title, content: content, language: "en", image: nil)
 		navigationController?.popViewController(animated: true)
 	}
 	

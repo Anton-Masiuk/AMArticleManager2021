@@ -20,7 +20,7 @@
 		CE992A2926C675AF00A9AB61 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE992A2526C675AF00A9AB61 /* Main.storyboard */; };
 		CE992A2E26C6839B00A9AB61 /* Const.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE992A2D26C6839B00A9AB61 /* Const.swift */; };
 		CE992A3226C6852D00A9AB61 /* UIStoryboard+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE992A3026C6852D00A9AB61 /* UIStoryboard+Extensions.swift */; };
-		CE992A3326C6852D00A9AB61 /* NSDate+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE992A3126C6852D00A9AB61 /* NSDate+Extensions.swift */; };
+		CE992A3326C6852D00A9AB61 /* Date+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE992A3126C6852D00A9AB61 /* Date+Extensions.swift */; };
 		CE992A3626C6877800A9AB61 /* ArticleDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE992A3426C6877800A9AB61 /* ArticleDetailsViewController.swift */; };
 		CE992A3726C6877800A9AB61 /* AddArticleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE992A3526C6877800A9AB61 /* AddArticleViewController.swift */; };
 /* End PBXBuildFile section */
@@ -44,7 +44,7 @@
 		CE992A2526C675AF00A9AB61 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		CE992A2D26C6839B00A9AB61 /* Const.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Const.swift; sourceTree = "<group>"; };
 		CE992A3026C6852D00A9AB61 /* UIStoryboard+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIStoryboard+Extensions.swift"; sourceTree = "<group>"; };
-		CE992A3126C6852D00A9AB61 /* NSDate+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSDate+Extensions.swift"; sourceTree = "<group>"; };
+		CE992A3126C6852D00A9AB61 /* Date+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Date+Extensions.swift"; sourceTree = "<group>"; };
 		CE992A3426C6877800A9AB61 /* ArticleDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticleDetailsViewController.swift; sourceTree = "<group>"; };
 		CE992A3526C6877800A9AB61 /* AddArticleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddArticleViewController.swift; sourceTree = "<group>"; };
 		D919924F11C1351A8794F24F /* Pods_Masiuk2021_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Masiuk2021_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -191,7 +191,7 @@
 			isa = PBXGroup;
 			children = (
 				CE992A3026C6852D00A9AB61 /* UIStoryboard+Extensions.swift */,
-				CE992A3126C6852D00A9AB61 /* NSDate+Extensions.swift */,
+				CE992A3126C6852D00A9AB61 /* Date+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -334,7 +334,7 @@
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
 				CE992A1C26C6738300A9AB61 /* ArticleTableViewCell.swift in Sources */,
 				CE992A3726C6877800A9AB61 /* AddArticleViewController.swift in Sources */,
-				CE992A3326C6852D00A9AB61 /* NSDate+Extensions.swift in Sources */,
+				CE992A3326C6852D00A9AB61 /* Date+Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
