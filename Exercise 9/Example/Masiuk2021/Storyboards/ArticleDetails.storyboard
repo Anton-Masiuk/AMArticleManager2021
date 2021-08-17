@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -14,23 +12,23 @@
             <objects>
                 <viewController storyboardIdentifier="ArticleDetailsViewController" title="Details" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Y6W-OH-hqX" customClass="ArticleDetailsViewController" customModule="Masiuk2021_Example" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h8f-Ue-aFP">
-                                <rect key="frame" x="16" y="95" width="382" height="24"/>
+                                <rect key="frame" x="16" y="51" width="568" height="24"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u6X-qM-MDA">
-                                <rect key="frame" x="16" y="127" width="115" height="24"/>
+                                <rect key="frame" x="16" y="83" width="115" height="24"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="description goes here" translatesAutoresizingMaskIntoConstraints="NO" id="cf0-bB-Vhg">
-                                <rect key="frame" x="16" y="159" width="382" height="320"/>
+                                <rect key="frame" x="16" y="115" width="568" height="320"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="320" id="UCZ-TO-Rzj"/>
@@ -40,13 +38,13 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Creation date:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gii-TJ-Vdk">
-                                <rect key="frame" x="264.5" y="487" width="133.5" height="24"/>
+                                <rect key="frame" x="450.5" y="443" width="133.5" height="24"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f0S-Ye-YdS">
-                                <rect key="frame" x="359" y="519" width="39" height="30"/>
+                                <rect key="frame" x="545" y="475" width="39" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="Uq1-xQ-0dU"/>
                                 </constraints>
@@ -55,7 +53,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aHx-fS-XCa">
-                                <rect key="frame" x="359" y="589" width="39" height="30"/>
+                                <rect key="frame" x="545" y="545" width="39" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="1II-rS-dwS"/>
                                 </constraints>
@@ -64,7 +62,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Modification date:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="anp-B6-n82">
-                                <rect key="frame" x="227" y="557" width="171" height="24"/>
+                                <rect key="frame" x="413" y="513" width="171" height="24"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -92,8 +90,8 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="contentTextView" destination="cf0-bB-Vhg" id="Ae1-dv-ie1"/>
                         <outlet property="creationDateLabel" destination="f0S-Ye-YdS" id="owt-kl-CyI"/>
-                        <outlet property="descriptionTextView" destination="cf0-bB-Vhg" id="Ae1-dv-ie1"/>
                         <outlet property="modificationDateLabel" destination="aHx-fS-XCa" id="88y-CK-NwG"/>
                         <outlet property="titleLabel" destination="h8f-Ue-aFP" id="0Ek-PG-PJ4"/>
                     </connections>

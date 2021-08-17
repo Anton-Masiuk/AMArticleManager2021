@@ -87,7 +87,8 @@ extension ArticlesViewController: UITableViewDelegate {
 	internal func tableView(_ tableView: UITableView,
 								 trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
 		let removeAction = UIContextualAction(style: .normal,
-																					title: Const.ArticleViewController.removeActionName) { [weak self] (action, view, completionHandler) in
+																					title: Const.ArticleViewController.removeActionName) {
+			[weak self] (action, view, completionHandler) in
 			self?.remove(at: indexPath)
 			completionHandler(true)
 		}

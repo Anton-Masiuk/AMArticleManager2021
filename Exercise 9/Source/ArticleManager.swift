@@ -23,11 +23,11 @@ public class ArticleManager {
 	// MARK: - Public Initializers
 	
 	public init() {
-		guard let modelURL = Bundle(for: ArticleManager.self).url(forResource: "Article", withExtension: "momd"),
+		guard let modelURL = Bundle(for: ArticleManager.self).url(forResource: Const.ArticleManager.articleModelName, withExtension: Const.ArticleManager.momdExtension),
 							let articleModel = NSManagedObjectModel(contentsOf: modelURL) else {
-					fatalError("Failed to find article model resource")
+			fatalError(Const.ArticleManager.urlResourceFailMessage)
 				}
-		let persistentContainer = NSPersistentContainer(name: "Article", managedObjectModel: articleModel)
+		let persistentContainer = NSPersistentContainer(name: Const.ArticleManager.articleModelName, managedObjectModel: articleModel)
 		persistentContainer.loadPersistentStores { (storeDescription, error) in
 			if let error = error as NSError? {
 				fatalError(error.localizedDescription)
@@ -39,14 +39,14 @@ public class ArticleManager {
   // MARK: - Public Methods
 	
 	public func newArticle(title: String, content: String, language: String, image: Data?) -> Article? {
-			let entity = NSEntityDescription.entity(forEntityName: "Article", in: managedObjectContext)!
+		let entity = NSEntityDescription.entity(forEntityName: Const.ArticleManager.articleModelName, in: managedObjectContext)!
 			let article = NSManagedObject(entity: entity, insertInto: managedObjectContext)
-			article.setValue(title, forKeyPath: "title")
-			article.setValue(content, forKey: "content")
-			article.setValue("en", forKey: "language")
-			article.setValue(image, forKey: "image")
-			article.setValue(NSDate(), forKey: "creationDate")
-			article.setValue(NSDate(), forKey: "modificationDate")
+		article.setValue(title, forKey: Const.ArticleManager.articleTitleKey)
+		article.setValue(content, forKey: Const.ArticleManager.articleContentKey)
+		article.setValue(language, forKey: Const.ArticleManager.articleLanguageKey)
+		article.setValue(image, forKey: Const.ArticleManager.articleImageKey)
+		article.setValue(NSDate(), forKey: Const.ArticleManager.articleCreationDateKey)
+		article.setValue(NSDate(), forKey: Const.ArticleManager.articleModificationDateKey)
 			save()
 			return nil
   }
@@ -69,7 +69,7 @@ public class ArticleManager {
   }
 	
 	public func getAllArticles() -> [Article] {
-		let request = NSFetchRequest<NSFetchRequestResult>(entityName: "Article")
+		let request = NSFetchRequest<NSFetchRequestResult>(entityName: Const.ArticleManager.articleModelName)
 		var array: [Article] = []
 		request.returnsObjectsAsFaults = false
 		do {
@@ -80,7 +80,7 @@ public class ArticleManager {
 				}
 			}
 		} catch {
-			debugPrint("Failed to load articles")
+			debugPrint(Const.ArticleManager.loadArticlesFailMessage)
 		}
 	return array
 	}
@@ -90,8 +90,8 @@ public class ArticleManager {
 	private func save() {
 		do {
 				try managedObjectContext.save()
-		} catch let error as NSError {
-			debugPrint("Failed to save changes in articles. \(error.localizedDescription)")
+		} catch {
+			debugPrint(Const.ArticleManager.saveArticlesFailMessage)
 		}
 	}
 }

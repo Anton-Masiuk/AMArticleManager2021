@@ -8,7 +8,7 @@
 import UIKit
 import Masiuk2021
 
-// MARK: - AddDeathNoteViewController
+// MARK: - AddArticle ViewController
 
 class AddArticleViewController: UIViewController {
 	
@@ -56,7 +56,10 @@ class AddArticleViewController: UIViewController {
 			presentAlert(message: Const.AddArticleViewController.noContentMessage)
 			return
 		}
-		let _ = ArticleManager.shared.newArticle(title: title, content: content, language: Const.AddArticleViewController.language, image: nil)
+		let _ = ArticleManager.shared.newArticle(title: title,
+																						 content: content,
+																						 language: Const.AddArticleViewController.language,
+																						 image: nil)
 		navigationController?.popViewController(animated: true)
 	}
 	
