@@ -18,20 +18,10 @@ internal struct Const {
 		static let articleModelName = "Article"
 		static let momdExtension = "momd"
 		
-		// MARK: - Article Model
-		
-		static let articleTitleKey = "title"
-		static let articleContentKey = "content"
-		static let articleLanguageKey = "language"
-		static let articleImageKey = "image"
-		static let articleCreationDateKey = "creationDate"
-		static let articleModificationDateKey = "modificationDate"
-		
 		// MARK: - Messages
 		
 		static let urlResourceFailMessage = "Failed to find article model resource"
 		static let loadArticlesFailMessage = "Failed to load articles"
 		static let saveArticlesFailMessage = "Failed to save changes in articles"
 	}
-	
 }

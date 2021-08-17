@@ -112,7 +112,6 @@
 				738C08304CEEFFBC471B3D3DEDC45680 /* LICENSE */,
 				2D71294683A5F58A524BAF653F851096 /* Masiuk2021.podspec */,
 				84AE8D33727F49BD803CE921A8807A23 /* README.md */,
-				CE97940726C546E9007D8946 /* Classes */,
 			);
 			name = Pod;
 			sourceTree = "<group>";
@@ -175,13 +174,6 @@
 				CE95573D26CBC5BB00126728 /* Const.swift */,
 			);
 			name = Constants;
-			sourceTree = "<group>";
-		};
-		CE97940726C546E9007D8946 /* Classes */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Classes;
 			sourceTree = "<group>";
 		};
 		CF1408CF629C7361332E53B88F7BD30C = {
