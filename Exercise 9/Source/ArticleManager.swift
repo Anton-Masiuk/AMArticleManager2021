@@ -23,11 +23,13 @@ public class ArticleManager {
 	// MARK: - Public Initializers
 	
 	public init() {
-		guard let modelURL = Bundle(for: ArticleManager.self).url(forResource: Const.ArticleManager.articleModelName, withExtension: Const.ArticleManager.momdExtension),
+		guard let modelURL = Bundle(for: ArticleManager.self).url(forResource: Const.ArticleManager.articleModelName,
+																															withExtension: Const.ArticleManager.momdExtension),
 							let articleModel = NSManagedObjectModel(contentsOf: modelURL) else {
 			fatalError(Const.ArticleManager.urlResourceFailMessage)
 				}
-		let persistentContainer = NSPersistentContainer(name: Const.ArticleManager.articleModelName, managedObjectModel: articleModel)
+		let persistentContainer = NSPersistentContainer(name: Const.ArticleManager.articleModelName,
+																										managedObjectModel: articleModel)
 		persistentContainer.loadPersistentStores { (storeDescription, error) in
 			if let error = error as NSError? {
 				fatalError(error.localizedDescription)
@@ -39,7 +41,8 @@ public class ArticleManager {
   // MARK: - Public Methods
 	
 	public func newArticle(title: String, content: String, language: String, image: Data?) -> Article? {
-		let entity = NSEntityDescription.entity(forEntityName: Const.ArticleManager.articleModelName, in: managedObjectContext)!
+		let entity = NSEntityDescription.entity(forEntityName: Const.ArticleManager.articleModelName,
+																						in: managedObjectContext)!
 			let article = NSManagedObject(entity: entity, insertInto: managedObjectContext)
 		article.setValue(title, forKey: Const.ArticleManager.articleTitleKey)
 		article.setValue(content, forKey: Const.ArticleManager.articleContentKey)
@@ -48,7 +51,7 @@ public class ArticleManager {
 		article.setValue(NSDate(), forKey: Const.ArticleManager.articleCreationDateKey)
 		article.setValue(NSDate(), forKey: Const.ArticleManager.articleModificationDateKey)
 			save()
-			return nil
+		return article as? Article
   }
   
 	public func getArticles(with lang: String) -> [Article] {
