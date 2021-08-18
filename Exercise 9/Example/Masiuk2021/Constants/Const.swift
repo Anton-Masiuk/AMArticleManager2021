@@ -15,7 +15,7 @@ struct Const {
 		static let basicDateFormat = "dd-MMM-yyyy HH:mm"
 	}
 	
-	// MARK: - View Controllers
+	// MARK: - ViewControllers
 	
 	struct ArticleViewController {
 		static let removeActionTitle = "Remove"

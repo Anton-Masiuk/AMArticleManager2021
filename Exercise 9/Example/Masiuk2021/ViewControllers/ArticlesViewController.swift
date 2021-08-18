@@ -21,7 +21,7 @@ class ArticlesViewController: UIViewController {
 	private let articleManager = ArticleManager.shared
 	private var articles: [Article] = []
 	
-	// MARK: - ViewController Lifecycle Methods
+	// MARK: - Lifecycle Methods
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
@@ -43,7 +43,7 @@ class ArticlesViewController: UIViewController {
 		tableView.dataSource = self
 		tableView.register(UINib(nibName: Const.ArticleTableViewCell.cellNibName, bundle: nil),
 											 forCellReuseIdentifier: Const.ArticleTableViewCell.cellID)
-		if let _ = navigationController {
+		if navigationController != nil {
 			let addBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add,
 																						 target: self,
 																						 action: #selector(pushAddArticleViewController))

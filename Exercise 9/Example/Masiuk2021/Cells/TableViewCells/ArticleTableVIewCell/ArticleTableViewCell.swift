@@ -8,6 +8,8 @@
 import UIKit
 import Masiuk2021
 
+// MARK: - Article TableViewCell
+
 class ArticleTableViewCell: UITableViewCell {
 
 	// MARK: - IBOutlets

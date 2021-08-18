@@ -63,6 +63,7 @@ public class ArticleManager {
 	
 	
 	public func getAllArticles() -> [Article] {
+		
 		return fetchRequest(key: nil, value: nil)
 	}
 	
@@ -77,7 +78,6 @@ public class ArticleManager {
 	public func getArticles(contain str: String) -> [Article] {
 		return fetchRequest(key: .content, value: str)
 	}
-	
 	
 	public func remove(article: Article) {
 		managedObjectContext.delete(article)

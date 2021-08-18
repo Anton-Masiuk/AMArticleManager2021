@@ -23,7 +23,7 @@ class ArticleDetailsViewController: UIViewController {
 
 	internal var articleModel: Article!
 
-	// MARK: - ViewController Lifecycle Methods
+	// MARK: - Lifecycle Methods
 
 	override func viewDidLoad() {
 		super .viewDidLoad()
