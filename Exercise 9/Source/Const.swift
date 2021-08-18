@@ -18,6 +18,10 @@ internal struct Const {
 		static let articleModelName = "Article"
 		static let momdExtension = "momd"
 		
+		// MARK: - Fetch Requst
+		
+		static let predicateContainSuffix =  " CONTAINS[c] %@"
+		
 		// MARK: - Messages
 		
 		static let urlResourceFailMessage = "Failed to find article model resource"

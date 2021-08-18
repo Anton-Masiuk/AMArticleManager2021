@@ -8,6 +8,8 @@
 
 import CoreData
 
+// MARK: - Article FetchKeys
+
 enum articleFetchKeys: String {
 	case title
 	case content
@@ -26,9 +28,9 @@ public class ArticleManager {
 	
 	private var managedObjectContext: NSManagedObjectContext
 	
-	// MARK: - Public Initializers
+	// MARK: - Private Initializers
 	
-	public init() {
+	private init() {
 		guard let modelURL = Bundle(for: ArticleManager.self).url(forResource: Const.ArticleManager.articleModelName,
 																															withExtension: Const.ArticleManager.momdExtension),
 					let articleModel = NSManagedObjectModel(contentsOf: modelURL) else {
@@ -67,8 +69,8 @@ public class ArticleManager {
 		return fetchRequest(key: nil, value: nil)
 	}
 	
-	public func getArticles(with lang: String) -> [Article] {
-		return fetchRequest(key: .language, value: lang)
+	public func getArticles(in language: String) -> [Article] {
+		return fetchRequest(key: .language, value: language)
 	}
 	
 	public func getArticle(by title: String) -> [Article] {
@@ -99,7 +101,7 @@ public class ArticleManager {
 	private func fetchRequest(key: articleFetchKeys?, value: String?) -> [Article] {
 		let request: NSFetchRequest<Article> = Article.fetchRequest()
 		if let key = key, let value = value {
-			request.predicate = NSPredicate(format: "\(key.rawValue) CONTAINS[c] %@", value)
+			request.predicate = NSPredicate(format: key.rawValue + Const.ArticleManager.predicateContainSuffix, value)
 		}
 		guard let result = try? managedObjectContext.fetch(request) else {
 			debugPrint(Const.ArticleManager.fetchRequestFailMessage)

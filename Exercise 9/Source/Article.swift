@@ -9,6 +9,8 @@ import Foundation
 
 extension Article {
 
+	// MARK: - Public Properties
+	
 	public var image: UIImage? {
 		if let data = self.imageData {
 			return UIImage(data: data)
