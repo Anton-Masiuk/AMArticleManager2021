@@ -26,15 +26,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		4D24247C2C7AD7CB44868453 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
-		53607238A9C0C87DC8B89450 /* Masiuk2021.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Masiuk2021.podspec; path = ../Masiuk2021.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		607FACD01AFB9204008FA782 /* Masiuk2021_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Masiuk2021_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACD51AFB9204008FA782 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		607FACD71AFB9204008FA782 /* ArticlesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticlesViewController.swift; sourceTree = "<group>"; };
 		607FACDC1AFB9204008FA782 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		607FACDF1AFB9204008FA782 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		C5B0AB2C0DDBFCD7E356A892 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		C82D752B70E4DF4C375CF60E /* Pods-Masiuk2021_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Masiuk2021_Example.debug.xcconfig"; path = "Target Support Files/Pods-Masiuk2021_Example/Pods-Masiuk2021_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		CE992A0B26C6738300A9AB61 /* ArticleTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ArticleTableViewCell.xib; sourceTree = "<group>"; };
 		CE992A0C26C6738300A9AB61 /* ArticleTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticleTableViewCell.swift; sourceTree = "<group>"; };
@@ -74,8 +71,7 @@
 		607FACC71AFB9204008FA782 = {
 			isa = PBXGroup;
 			children = (
-				607FACF51AFB993E008FA782 /* Podspec Metadata */,
-				607FACD21AFB9204008FA782 /* Example for Masiuk2021 */,
+				607FACD21AFB9204008FA782 /* Example */,
 				607FACD11AFB9204008FA782 /* Products */,
 				E211F973D6CD14AEAE62BE3D /* Pods */,
 				3A068BBF9A3064481B663F72 /* Frameworks */,
@@ -90,7 +86,7 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		607FACD21AFB9204008FA782 /* Example for Masiuk2021 */ = {
+		607FACD21AFB9204008FA782 /* Example */ = {
 			isa = PBXGroup;
 			children = (
 				CE992A2C26C6839B00A9AB61 /* Constants */,
@@ -101,7 +97,7 @@
 				CE992A2A26C675E500A9AB61 /* Resourses */,
 				607FACD31AFB9204008FA782 /* Supporting Files */,
 			);
-			name = "Example for Masiuk2021";
+			name = Example;
 			path = Masiuk2021;
 			sourceTree = "<group>";
 		};
@@ -112,16 +108,6 @@
 				607FACD41AFB9204008FA782 /* Info.plist */,
 			);
 			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		607FACF51AFB993E008FA782 /* Podspec Metadata */ = {
-			isa = PBXGroup;
-			children = (
-				53607238A9C0C87DC8B89450 /* Masiuk2021.podspec */,
-				C5B0AB2C0DDBFCD7E356A892 /* README.md */,
-				4D24247C2C7AD7CB44868453 /* LICENSE */,
-			);
-			name = "Podspec Metadata";
 			sourceTree = "<group>";
 		};
 		CE992A0826C6738300A9AB61 /* Cells */ = {
@@ -135,18 +121,18 @@
 		CE992A0926C6738300A9AB61 /* TableViewCells */ = {
 			isa = PBXGroup;
 			children = (
-				CE992A0A26C6738300A9AB61 /* ArticleVIewCell */,
+				CE992A0A26C6738300A9AB61 /* ArticleTableVIewCell */,
 			);
 			path = TableViewCells;
 			sourceTree = "<group>";
 		};
-		CE992A0A26C6738300A9AB61 /* ArticleVIewCell */ = {
+		CE992A0A26C6738300A9AB61 /* ArticleTableVIewCell */ = {
 			isa = PBXGroup;
 			children = (
 				CE992A0B26C6738300A9AB61 /* ArticleTableViewCell.xib */,
 				CE992A0C26C6738300A9AB61 /* ArticleTableViewCell.swift */,
 			);
-			path = ArticleVIewCell;
+			path = ArticleTableVIewCell;
 			sourceTree = "<group>";
 		};
 		CE992A2126C6758800A9AB61 /* Storyboards */ = {

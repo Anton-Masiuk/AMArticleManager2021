@@ -1,8 +1,8 @@
 //
 //  Const.swift
-//  Exercise2
+//  Masiuk2021
 //
-//  Created by user on 06.07.2021.
+//  Created by Anton M on 06.07.2021.
 //
 
 import Foundation
@@ -12,13 +12,13 @@ struct Const {
 	// MARK: - Global
 
 	struct Global {
-		static let dateFormat = "dd-MMM-yyyy HH:mm"
+		static let basicDateFormat = "dd-MMM-yyyy HH:mm"
 	}
 	
 	// MARK: - View Controllers
 	
 	struct ArticleViewController {
-		static let removeActionName = "Remove"
+		static let removeActionTitle = "Remove"
 	}
 	
 	struct AddArticleViewController {
@@ -30,13 +30,13 @@ struct Const {
 	}
 	
 	struct ArticleDetailsViewController {
-		static let noTitleName = "No title"
+		static let noTitle = "No title"
 	}
 	
 	// MARK: - TableView Cells
 
 	struct ArticleTableViewCell {
 		static let cellID = "ArticleCellReusableID"
-		static let nibName = "ArticleTableViewCell"
+		static let cellNibName = "ArticleTableViewCell"
 	}
 }

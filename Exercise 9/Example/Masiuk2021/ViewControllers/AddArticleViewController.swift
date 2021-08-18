@@ -1,8 +1,8 @@
 //
 //  AddArticleViewController.swift
-//  Exercise2
+//  Masiuk2021
 //
-//  Created by MSQUARDIAN on 6/24/21.
+//  Created by Anton M on 6/24/21.
 //
 
 import UIKit
@@ -35,13 +35,14 @@ class AddArticleViewController: UIViewController {
 	
 	private func setupViews() {
 		contentTextView.textContainer.lineBreakMode = .byTruncatingTail
-		navigationItem.rightBarButtonItem = UIBarButtonItem(title: Const.AddArticleViewController.barButtontitle, style: .plain,
-																												target: self, action: #selector(doneEditingNewNote))
+		navigationItem.rightBarButtonItem = UIBarButtonItem(title: Const.AddArticleViewController.barButtontitle,
+																												style: .plain,
+																												target: self, action: #selector(doneEditingArticle))
 	}
 	
 	// MARK: - IBActions
 
-	@objc private func doneEditingNewNote() {
+	@objc private func doneEditingArticle() {
 		validateAndCreateArticleModel()
 	}
 	

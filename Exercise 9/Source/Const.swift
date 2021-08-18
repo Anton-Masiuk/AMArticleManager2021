@@ -23,5 +23,6 @@ internal struct Const {
 		static let urlResourceFailMessage = "Failed to find article model resource"
 		static let loadArticlesFailMessage = "Failed to load articles"
 		static let saveArticlesFailMessage = "Failed to save changes in articles"
+		static let fetchRequestFailMessage = "Fetch request failed"
 	}
 }

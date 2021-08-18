@@ -1,8 +1,8 @@
 //
 //  ArticleDetailsViewController.swift
-//  Exercise2
+//  Masiuk2021
 //
-//  Created by user on 25.06.2021.
+//  Created by Anton M on 25.06.2021.
 //
 
 import UIKit
@@ -21,7 +21,7 @@ class ArticleDetailsViewController: UIViewController {
 	
 	// MARK: - Internal Properties
 
-	internal var articleeModel: Article!
+	internal var articleModel: Article!
 
 	// MARK: - ViewController Lifecycle Methods
 
@@ -34,9 +34,9 @@ class ArticleDetailsViewController: UIViewController {
 	// MARK: - Setup Methods
 
 	private func setupViews() {
-		titleLabel.text = articleeModel.title ?? Const.ArticleDetailsViewController.noTitleName
-		contentTextView.text = articleeModel.content
-		creationDateLabel.text = articleeModel.creationDate?.formattedString() ?? ""
-		modificationDateLabel.text = articleeModel.creationDate?.formattedString() ?? ""
+		titleLabel.text = articleModel.title ?? Const.ArticleDetailsViewController.noTitle
+		contentTextView.text = articleModel.content
+		creationDateLabel.text = articleModel.creationDate?.formattedString() ?? ""
+		modificationDateLabel.text = articleModel.creationDate?.formattedString() ?? ""
 	}
 }

@@ -2,8 +2,7 @@
 //  ArticlesViewController.swift
 //  Masiuk2021
 //
-//  Created by Anton Masiuk on 08/12/2021.
-//  Copyright (c) 2021 Anton Masiuk. All rights reserved.
+//  Created by Anton M on 08/12/2021.
 //
 
 import UIKit
@@ -42,29 +41,30 @@ class ArticlesViewController: UIViewController {
 	private func setupSettings() {
 		tableView.delegate = self
 		tableView.dataSource = self
-		tableView.register(UINib(nibName: Const.ArticleTableViewCell.nibName, bundle: nil),
+		tableView.register(UINib(nibName: Const.ArticleTableViewCell.cellNibName, bundle: nil),
 											 forCellReuseIdentifier: Const.ArticleTableViewCell.cellID)
 		if let _ = navigationController {
-			let addBarButtonItem =
-				UIBarButtonItem(barButtonSystemItem: .add,target: self, action: #selector(pushAddNoteViewController))
+			let addBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add,
+																						 target: self,
+																						 action: #selector(pushAddArticleViewController))
 			navigationItem.rightBarButtonItem = addBarButtonItem
 		}
 	}
 	
 	// MARK: - Action Methods
 	
-	@objc private func pushAddNoteViewController() {
+	@objc private func pushAddArticleViewController() {
 		guard let addArticleViewController = UIStoryboard.addArticleViewController() else { return }
 		navigationController?.pushViewController(addArticleViewController, animated: true)
 	}
 	
 	// MARK: - Private Methods
 	
-	private func pushDeathNoteDetailsViewController(with articleModel: Article) {
+	private func pushArticleDetailsViewController(with articleModel: Article) {
 		guard let articleDetailsViewController = UIStoryboard.articleDetailsViewController() else { return }
 		
-		articleDetailsViewController.articleeModel = articleModel
-		articleDetailsViewController.title = articleModel.title ?? Const.ArticleDetailsViewController.noTitleName
+		articleDetailsViewController.articleModel = articleModel
+		articleDetailsViewController.title = articleModel.title ?? Const.ArticleDetailsViewController.noTitle
 		self.navigationController?.pushViewController(articleDetailsViewController, animated: true)
 	}
 	
@@ -80,14 +80,14 @@ class ArticlesViewController: UIViewController {
 extension ArticlesViewController: UITableViewDelegate {
 	
 	internal func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-		let deathNoteModel = articles[indexPath.row]
-		pushDeathNoteDetailsViewController(with: deathNoteModel)
+		let articleModel = articles[indexPath.row]
+		pushArticleDetailsViewController(with: articleModel)
 	}
 	
 	internal func tableView(_ tableView: UITableView,
 								 trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
 		let removeAction = UIContextualAction(style: .normal,
-																					title: Const.ArticleViewController.removeActionName) {
+																					title: Const.ArticleViewController.removeActionTitle) {
 			[weak self] (action, view, completionHandler) in
 			self?.remove(at: indexPath)
 			completionHandler(true)

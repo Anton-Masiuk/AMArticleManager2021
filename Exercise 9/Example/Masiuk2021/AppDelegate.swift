@@ -2,8 +2,7 @@
 //  AppDelegate.swift
 //  Masiuk2021
 //
-//  Created by Anton Masiuk on 08/12/2021.
-//  Copyright (c) 2021 Anton Masiuk. All rights reserved.
+//  Created by Anton M on 08/12/2021.
 //
 
 import UIKit
