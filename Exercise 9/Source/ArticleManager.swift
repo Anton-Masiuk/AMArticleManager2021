@@ -69,11 +69,11 @@ public class ArticleManager {
 		return fetchRequest(key: nil, value: nil)
 	}
 	
-	public func getArticles(in language: String) -> [Article] {
+	public func getArticles(inLanguage language: String) -> [Article] {
 		return fetchRequest(key: .language, value: language)
 	}
 	
-	public func getArticle(by title: String) -> [Article] {
+	public func getArticle(byTitle title: String) -> [Article] {
 		return fetchRequest(key: .title, value: title)
 	}
 	

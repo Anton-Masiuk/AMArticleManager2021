@@ -59,7 +59,7 @@ class AddArticleViewController: UIViewController {
 		}
 		let _ = ArticleManager.shared.newArticle(title: title,
 																						 content: content,
-																						 language: Const.AddArticleViewController.language,
+																						 language: Const.Global.defaultLanguage,
 																						 image: nil)
 		navigationController?.popViewController(animated: true)
 	}

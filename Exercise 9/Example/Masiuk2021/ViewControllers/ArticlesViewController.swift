@@ -33,6 +33,7 @@ class ArticlesViewController: UIViewController {
 		super.viewWillAppear(animated)
 		
 		articles = articleManager.getAllArticles()
+		runFetchTests()
 		tableView.reloadData()
 	}
 	
@@ -72,6 +73,49 @@ class ArticlesViewController: UIViewController {
 		let article = articles.remove(at: index.row)
 		articleManager.remove(article: article)
 		tableView.reloadData()
+	}
+	
+	private func runFetchTests() {
+		configureTestArticles()
+		testFetchByContent()
+		testFetchByTitle()
+		testFetchByLanguage()
+	}
+	
+	private func configureTestArticles() {
+		if articles == [] {
+			for index in 0..<Const.podTests.title.count {
+				let _ = articleManager.newArticle(title: Const.podTests.title[index],
+																					content: Const.podTests.content[index],
+																					language: Const.podTests.language[index],
+																					image: nil)
+			}
+		}
+		articles = articleManager.getAllArticles()
+		tableView.reloadData()
+	}
+	
+	private func testFetchByContent() {
+		if let substring = articles.first?.content?.prefix(3) {
+			let string = String(substring)
+			print(Const.podTests.fetchMessagePrefix + string + Const.podTests.contentFetchMessageSuffix)
+			print(articleManager.getArticles(contain: string))
+		}
+	}
+	
+	private func testFetchByTitle() {
+		if let substring = articles.last?.title?.suffix(1) {
+			let title = String(substring)
+			print(Const.podTests.fetchMessagePrefix + title + Const.podTests.titleFetchMessageSuffix)
+			print(articleManager.getArticle(byTitle: title))
+		}
+	}
+	
+	private func testFetchByLanguage() {
+		if let language = Const.podTests.language.last {
+			print(Const.podTests.fetchMessagePrefix + language + Const.podTests.contentFetchMessageSuffix)
+			print(articleManager.getArticles(inLanguage: language))
+		}
 	}
 }
 
