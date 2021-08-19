@@ -50,7 +50,8 @@ public class ArticleManager {
 	
 	public func newArticle(title: String, content: String, language: String, image: UIImage?) -> Article? {
 		guard let article = NSEntityDescription.insertNewObject(forEntityName: Const.ArticleManager.articleModelName,
-																														into: managedObjectContext) as? Article else { return nil }
+																														into: managedObjectContext) as? Article,
+					getArticle(byTitle: title).isEmpty else { return nil }
 		article.title = title
 		article.content = content
 		article.language = language
@@ -91,7 +92,7 @@ public class ArticleManager {
 			do {
 				try managedObjectContext.save()
 			} catch {
-				debugPrint(Const.ArticleManager.saveArticlesFailMessage)
+				debugPrint(error.localizedDescription)
 			}
 		}
 	}

@@ -13,21 +13,21 @@ import Masiuk2021
 class AddArticleViewController: UIViewController {
 	
 	// MARK: - IBOutlets
-
+	
 	@IBOutlet weak private var titleTextField: UITextField!
 	@IBOutlet weak private var contentTextView: UITextView!
 	
 	// MARK: - ViewController Lifecycle Methods
-
+	
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		
 		setupSettings()
 		setupViews()
 	}
-
+	
 	// MARK: - Setup Methods
-
+	
 	private func setupSettings() {
 		titleTextField.delegate = self
 		view.addGestureRecognizer(UITapGestureRecognizer(target: view, action: #selector(UIView.endEditing)))
@@ -41,13 +41,13 @@ class AddArticleViewController: UIViewController {
 	}
 	
 	// MARK: - IBActions
-
+	
 	@objc private func doneEditingArticle() {
 		validateAndCreateArticleModel()
 	}
 	
 	// MARK: - Private Methods
-
+	
 	private func validateAndCreateArticleModel() {
 		guard let title = titleTextField.text, title != "" else {
 			presentAlert(message: Const.AddArticleViewController.noTitleMessage)
@@ -57,10 +57,13 @@ class AddArticleViewController: UIViewController {
 			presentAlert(message: Const.AddArticleViewController.noContentMessage)
 			return
 		}
-		let _ = ArticleManager.shared.newArticle(title: title,
-																						 content: content,
-																						 language: Const.Global.defaultLanguage,
-																						 image: nil)
+		guard let _ = ArticleManager.shared.newArticle(title: title,
+																									 content: content,
+																									 language: Const.Global.defaultLanguage,
+																									 image: nil) else {
+			presentAlert(message: Const.AddArticleViewController.nonUniqueTitleMessage)
+			return
+		}
 		navigationController?.popViewController(animated: true)
 	}
 	
@@ -74,13 +77,13 @@ class AddArticleViewController: UIViewController {
 // MARK: - UITextFieldDelegate Extension
 
 extension AddArticleViewController: UITextFieldDelegate {
-
+	
 	internal func textField(_ textField: UITextField,shouldChangeCharactersIn range: NSRange,
 													replacementString string: String) -> Bool {
-				let currentText = textField.text ?? ""
-				guard let stringRange = Range(range, in: currentText) else { return false }
-				let updatedText = currentText.replacingCharacters(in: stringRange, with: string)
-				return updatedText.count <= 20
+		let currentText = textField.text ?? ""
+		guard let stringRange = Range(range, in: currentText) else { return false }
+		let updatedText = currentText.replacingCharacters(in: stringRange, with: string)
+		return updatedText.count <= 20
 	}
 }
 

@@ -37,16 +37,13 @@
 		077315495FBD89A4B6B0049BDEF6D0BE /* Pods-Masiuk2021_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Masiuk2021_Example-umbrella.h"; sourceTree = "<group>"; };
 		09DFBCCF851E5799431C64E3565D725F /* Masiuk2021-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Masiuk2021-prefix.pch"; sourceTree = "<group>"; };
 		2B0992EEF9BD8A255C83FEB796DD477A /* Pods-Masiuk2021_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Masiuk2021_Example-acknowledgements.plist"; sourceTree = "<group>"; };
-		2D71294683A5F58A524BAF653F851096 /* Masiuk2021.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = Masiuk2021.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		370967562E9E202756F4AB0B431B794A /* Masiuk2021-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Masiuk2021-dummy.m"; sourceTree = "<group>"; };
 		3C2E112CC15696BF9C64547FAEEAA14D /* Pods-Masiuk2021_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Masiuk2021_Example.modulemap"; sourceTree = "<group>"; };
 		3DAA870CCDD402408FC78295AA42E2E0 /* Pods-Masiuk2021_Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Masiuk2021_Example-Info.plist"; sourceTree = "<group>"; };
 		73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		738C08304CEEFFBC471B3D3DEDC45680 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		7AFAB07958CE8C5402E74A4A885CBD8B /* Pods-Masiuk2021_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Masiuk2021_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		7F1BA23F9BC44A7C0914A416E938CDCB /* Pods-Masiuk2021_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Masiuk2021_Example-dummy.m"; sourceTree = "<group>"; };
 		7F837BA4DFF072E0A314574A1BD9F67F /* Masiuk2021.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Masiuk2021.release.xcconfig; sourceTree = "<group>"; };
-		84AE8D33727F49BD803CE921A8807A23 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		86DDE647E547B7ED3368DF1ED7546827 /* Masiuk2021-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Masiuk2021-Info.plist"; sourceTree = "<group>"; };
 		93E52EA8E0399C803C9199407BEB215F /* Masiuk2021.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = Masiuk2021.modulemap; sourceTree = "<group>"; };
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
@@ -112,9 +109,6 @@
 			children = (
 				CE95573C26CBC59700126728 /* Constants */,
 				CE95572926CBAA4900126728 /* Source */,
-				738C08304CEEFFBC471B3D3DEDC45680 /* LICENSE */,
-				2D71294683A5F58A524BAF653F851096 /* Masiuk2021.podspec */,
-				84AE8D33727F49BD803CE921A8807A23 /* README.md */,
 			);
 			name = Pod;
 			sourceTree = "<group>";

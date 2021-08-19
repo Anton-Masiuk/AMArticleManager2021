@@ -25,6 +25,7 @@ struct Const {
 	struct AddArticleViewController {
 		static let noTitleMessage = "Please enter article's title"
 		static let noContentMessage = "Please enter article's content"
+		static let nonUniqueTitleMessage = "Can't areate article. Title already exists"
 		static let alertActionTitle = "Ok"
 		static let barButtontitle = "Done"
 	}
