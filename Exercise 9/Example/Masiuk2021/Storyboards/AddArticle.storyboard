@@ -49,7 +49,7 @@
                             <constraint firstItem="8eN-gi-AxW" firstAttribute="centerX" secondItem="kgW-Le-bLv" secondAttribute="centerX" id="vmO-My-ZFh"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Add a Person" id="IIc-Ev-qG9"/>
+                    <navigationItem key="navigationItem" title="Create Article" id="IIc-Ev-qG9"/>
                     <connections>
                         <outlet property="contentTextView" destination="8eN-gi-AxW" id="VaH-hf-HMu"/>
                         <outlet property="titleTextField" destination="Mxc-rW-2kj" id="u08-8p-uES"/>

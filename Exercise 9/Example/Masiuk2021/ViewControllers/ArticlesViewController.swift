@@ -20,6 +20,7 @@ class ArticlesViewController: UIViewController {
 	
 	private let articleManager = ArticleManager.shared
 	private var articles: [Article] = []
+	private let articleSearchController = UISearchController()
 	
 	// MARK: - Lifecycle Methods
 	
@@ -27,14 +28,14 @@ class ArticlesViewController: UIViewController {
 		super.viewDidLoad()
 		
 		setupSettings()
+		loadAllArticles()
+		configureTestArticles()
 	}
 	
 	override func viewWillAppear(_ animated: Bool) {
 		super.viewWillAppear(animated)
 		
-		articles = articleManager.getAllArticles()
-		runFetchTests()
-		tableView.reloadData()
+		loadAllArticles()
 	}
 	
 	// MARK: - Setup Methods
@@ -44,11 +45,15 @@ class ArticlesViewController: UIViewController {
 		tableView.dataSource = self
 		tableView.register(UINib(nibName: Const.ArticleTableViewCell.cellNibName, bundle: nil),
 											 forCellReuseIdentifier: Const.ArticleTableViewCell.cellID)
+		articleSearchController.searchBar.delegate = self
+		articleSearchController.delegate = self
 		if navigationController != nil {
 			let addBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add,
 																						 target: self,
 																						 action: #selector(pushAddArticleViewController))
 			navigationItem.rightBarButtonItem = addBarButtonItem
+			navigationItem.searchController = articleSearchController
+			navigationItem.hidesSearchBarWhenScrolling = false
 		}
 	}
 	
@@ -69,19 +74,20 @@ class ArticlesViewController: UIViewController {
 		self.navigationController?.pushViewController(articleDetailsViewController, animated: true)
 	}
 	
+	private func loadAllArticles() {
+		articles = articleManager.getAllArticles()
+		tableView.reloadData()
+	}
+	
 	private func remove(at index: IndexPath) {
 		let article = articles.remove(at: index.row)
 		articleManager.remove(article: article)
 		tableView.reloadData()
 	}
 	
-	private func runFetchTests() {
-		configureTestArticles()
-		testFetchByContent()
-		testFetchByTitle()
-		testFetchByLanguage()
-	}
 	
+	
+
 	private func configureTestArticles() {
 		if articles == [] {
 			for index in 0..<Const.podTests.title.count {
@@ -94,29 +100,7 @@ class ArticlesViewController: UIViewController {
 		articles = articleManager.getAllArticles()
 		tableView.reloadData()
 	}
-	
-	private func testFetchByContent() {
-		if let substring = articles.first?.content?.prefix(3) {
-			let string = String(substring)
-			print(Const.podTests.fetchMessagePrefix + string + Const.podTests.contentFetchMessageSuffix)
-			print(articleManager.getArticles(contain: string))
-		}
-	}
-	
-	private func testFetchByTitle() {
-		if let substring = articles.last?.title?.suffix(1) {
-			let title = String(substring)
-			print(Const.podTests.fetchMessagePrefix + title + Const.podTests.titleFetchMessageSuffix)
-			print(articleManager.getArticle(byTitle: title))
-		}
-	}
-	
-	private func testFetchByLanguage() {
-		if let language = Const.podTests.language.last {
-			print(Const.podTests.fetchMessagePrefix + language + Const.podTests.contentFetchMessageSuffix)
-			print(articleManager.getArticles(inLanguage: language))
-		}
-	}
+
 }
 
 // MARK: - UITableViewDelegate Extension
@@ -163,4 +147,31 @@ extension ArticlesViewController: UITableViewDataSource {
 	}
 }
 
+// MARK: - UISearchControllerDelegate Extension
 
+
+extension ArticlesViewController: UISearchControllerDelegate {
+	
+	func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+		loadAllArticles()
+	}
+}
+
+// MARK: - UISearchBarDelegate Extension
+
+extension ArticlesViewController: UISearchBarDelegate {
+	func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+		guard let searchPhrase = searchBar.text else {
+			loadAllArticles()
+			return
+		}
+		articles = articleManager.getArticles(contain: searchPhrase)
+		if articles.isEmpty {
+			articles = articleManager.getArticle(byTitle: searchPhrase)
+		}
+		if articles.isEmpty {
+			articles = articleManager.getArticles(inLanguage: searchPhrase)
+		}
+		tableView.reloadData()
+	}
+}
