@@ -8,8 +8,8 @@ Pod::Spec.new do |s|
   s.source           = { :git => 'https://github.com/Anton-Masiuk/AMArticleManager2021.git', :tag => s.version.to_s }
 	
   s.ios.deployment_target = '12.0'
-  s.source_files = 'Source/*.swift'
-	s.resources = 'Source/Article.xcdatamodeld'
+  s.source_files = 'AMArticleManager2021/**/*.swift'
+	s.resources = 'AMArticleManager2021/**/*/Article.xcdatamodeld'
 	s.frameworks = 'CoreData', 'UIKit'
 	s.swift_versions = '5'
 end
