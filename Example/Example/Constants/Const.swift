@@ -1,6 +1,6 @@
 //
 //  Const.swift
-//  Masiuk2021
+//  AMArticleManager2021
 //
 //  Created by Anton M on 06.07.2021.
 //
@@ -39,19 +39,5 @@ struct Const {
 	struct ArticleTableViewCell {
 		static let cellID = "ArticleCellReusableID"
 		static let cellNibName = "ArticleTableViewCell"
-	}
-	
-	// MARK: - Masiuk2021 Pod Tests
-	
-	struct podTests {
-		static let title = ["Test1", "Test2", "Article1"]
-		static let content = [ "And this is how it goes: <some story>",
-													 "London is a capital of Great Britain",
-													 "pen and pencil"]
-		static let language = ["en", "en", "ru"]
-		static let fetchMessagePrefix = "\nFetch by '"
-		static let contentFetchMessageSuffix = "' in content:"
-		static let titleFetchMessageSuffix = "' in title:"
-		static let languageFetchMessageSuffix = "' language:"
 	}
 }

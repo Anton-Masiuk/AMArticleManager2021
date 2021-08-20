@@ -1,6 +1,6 @@
 //
 //  AddArticleViewController.swift
-//  Masiuk2021
+//  AMArticleManager2021
 //
 //  Created by Anton M on 6/24/21.
 //
@@ -57,10 +57,10 @@ class AddArticleViewController: UIViewController {
 			presentAlert(message: Const.AddArticleViewController.noContentMessage)
 			return
 		}
-		guard let _ = ArticleManager.shared.newArticle(title: title,
+		guard ArticleManager.shared.newArticle(title: title,
 																									 content: content,
 																									 language: Const.Global.defaultLanguage,
-																									 image: nil) else {
+																									 image: nil) != nil else {
 			presentAlert(message: Const.AddArticleViewController.nonUniqueTitleMessage)
 			return
 		}

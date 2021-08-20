@@ -143,10 +143,10 @@
 			isa = PBXGroup;
 			children = (
 				CE38463C26CFCC3D00B8043E /* LaunchScreen.storyboard */,
-				CE38466B26CFCCA000B8043E /* ArticleDetails.storyboard */,
-				CE38466C26CFCCA000B8043E /* AddArticle.storyboard */,
-				CE38466D26CFCCA000B8043E /* Articles.storyboard */,
 				CE38467026CFCCA000B8043E /* Main.storyboard */,
+				CE38466D26CFCCA000B8043E /* Articles.storyboard */,
+				CE38466C26CFCCA000B8043E /* AddArticle.storyboard */,
+				CE38466B26CFCCA000B8043E /* ArticleDetails.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";

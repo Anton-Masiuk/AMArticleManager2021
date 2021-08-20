@@ -1,6 +1,6 @@
 //
 //  ArticleDetailsViewController.swift
-//  Masiuk2021
+//  AMArticleManager2021
 //
 //  Created by Anton M on 25.06.2021.
 //

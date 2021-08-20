@@ -12,6 +12,10 @@ To run the example project, clone the repo, and run `pod install` from the Examp
 
 ## Installation
 
+```ruby
+pod 'AMArticleManager2021', :git => 'https://github.com/Anton-Masiuk/AMArticleManager2021.git'
+```
+
 AMArticleManager2021 is available through [CocoaPods](https://cocoapods.org). To install
 it, simply add the following line to your Podfile:
 

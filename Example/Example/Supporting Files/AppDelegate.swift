@@ -1,6 +1,6 @@
 //
 //  AppDelegate.swift
-//  Masiuk2021
+//  AMArticleManager2021
 //
 //  Created by Anton M on 08/12/2021.
 //

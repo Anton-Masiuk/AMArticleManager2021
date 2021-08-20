@@ -1,15 +1,15 @@
 //
 //  Article.swift
-//  Masiuk2021
+//  AMArticleManager2021
 //
 //  Created by Anton M on 18.08.2021.
 //
 
 import UIKit
 
-extension Article {
+// MARK: - Article Extension
 
-	// MARK: - Public Properties
+extension Article {
 	
 	public var image: UIImage? {
 		if let data = self.imageData {

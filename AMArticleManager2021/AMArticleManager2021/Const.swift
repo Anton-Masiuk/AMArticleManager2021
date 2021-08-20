@@ -1,6 +1,6 @@
 //
 //  Const.swift
-//  Masiuk2021
+//  AMArticleManager2021
 //
 //  Created by Anton M on 17.08.2021.
 //

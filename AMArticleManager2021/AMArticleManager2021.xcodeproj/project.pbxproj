@@ -19,9 +19,9 @@
 		CE3846A626CFD0CF00B8043E /* AMArticleManager2021.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AMArticleManager2021.h; sourceTree = "<group>"; };
 		CE3846A726CFD0CF00B8043E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CE3846AF26CFD0E800B8043E /* Article.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Article.xcdatamodel; sourceTree = "<group>"; };
-		CE3846B026CFD0E800B8043E /* Const.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Const.swift; path = ../../Source/Const.swift; sourceTree = "<group>"; };
-		CE3846B126CFD0E800B8043E /* ArticleManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ArticleManager.swift; path = ../../Source/ArticleManager.swift; sourceTree = "<group>"; };
-		CE3846B226CFD0E800B8043E /* Article.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Article.swift; path = ../../Source/Article.swift; sourceTree = "<group>"; };
+		CE3846B026CFD0E800B8043E /* Const.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Const.swift; sourceTree = "<group>"; };
+		CE3846B126CFD0E800B8043E /* ArticleManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticleManager.swift; sourceTree = "<group>"; };
+		CE3846B226CFD0E800B8043E /* Article.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Article.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +54,38 @@
 		CE3846A526CFD0CF00B8043E /* AMArticleManager2021 */ = {
 			isa = PBXGroup;
 			children = (
-				CE3846A626CFD0CF00B8043E /* AMArticleManager2021.h */,
+				CE3846E826CFDE4D00B8043E /* Constants */,
+				CE3846E726CFDE3F00B8043E /* Source */,
+				CE3846E926CFDE6400B8043E /* Supporting Files */,
+			);
+			path = AMArticleManager2021;
+			sourceTree = "<group>";
+		};
+		CE3846E726CFDE3F00B8043E /* Source */ = {
+			isa = PBXGroup;
+			children = (
 				CE3846B226CFD0E800B8043E /* Article.swift */,
 				CE3846AE26CFD0E800B8043E /* Article.xcdatamodeld */,
 				CE3846B126CFD0E800B8043E /* ArticleManager.swift */,
+			);
+			name = Source;
+			sourceTree = "<group>";
+		};
+		CE3846E826CFDE4D00B8043E /* Constants */ = {
+			isa = PBXGroup;
+			children = (
 				CE3846B026CFD0E800B8043E /* Const.swift */,
+			);
+			name = Constants;
+			sourceTree = "<group>";
+		};
+		CE3846E926CFDE6400B8043E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				CE3846A626CFD0CF00B8043E /* AMArticleManager2021.h */,
 				CE3846A726CFD0CF00B8043E /* Info.plist */,
 			);
-			path = AMArticleManager2021;
+			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -285,7 +309,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = AMArticleManager2021/Info.plist;
+				INFOPLIST_FILE = "AMArticleManager2021/Supporting Files/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -311,7 +335,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = AMArticleManager2021/Info.plist;
+				INFOPLIST_FILE = "AMArticleManager2021/Supporting Files/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -356,8 +380,7 @@
 				CE3846AF26CFD0E800B8043E /* Article.xcdatamodel */,
 			);
 			currentVersion = CE3846AF26CFD0E800B8043E /* Article.xcdatamodel */;
-			name = Article.xcdatamodeld;
-			path = ../../Source/Article.xcdatamodeld;
+			path = Article.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};

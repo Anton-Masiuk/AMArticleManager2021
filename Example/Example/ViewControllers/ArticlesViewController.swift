@@ -1,6 +1,6 @@
 //
 //  ArticlesViewController.swift
-//  Masiuk2021
+//  AMArticleManager2021
 //
 //  Created by Anton M on 08/12/2021.
 //
@@ -29,7 +29,7 @@ class ArticlesViewController: UIViewController {
 		
 		setupSettings()
 		loadAllArticles()
-		configureTestArticles()
+		addTestArticles()
 	}
 	
 	override func viewWillAppear(_ animated: Bool) {
@@ -47,14 +47,12 @@ class ArticlesViewController: UIViewController {
 											 forCellReuseIdentifier: Const.ArticleTableViewCell.cellID)
 		articleSearchController.searchBar.delegate = self
 		articleSearchController.delegate = self
-		if navigationController != nil {
-			let addBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add,
-																						 target: self,
-																						 action: #selector(pushAddArticleViewController))
-			navigationItem.rightBarButtonItem = addBarButtonItem
-			navigationItem.searchController = articleSearchController
-			navigationItem.hidesSearchBarWhenScrolling = false
-		}
+		let addBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add,
+																					 target: self,
+																					 action: #selector(pushAddArticleViewController))
+		navigationItem.rightBarButtonItem = addBarButtonItem
+		navigationItem.searchController = articleSearchController
+		navigationItem.hidesSearchBarWhenScrolling = false
 	}
 	
 	// MARK: - Action Methods
@@ -85,22 +83,19 @@ class ArticlesViewController: UIViewController {
 		tableView.reloadData()
 	}
 	
-	
-	
-
-	private func configureTestArticles() {
-		if articles == [] {
-			for index in 0..<Const.podTests.title.count {
-				let _ = articleManager.newArticle(title: Const.podTests.title[index],
-																					content: Const.podTests.content[index],
-																					language: Const.podTests.language[index],
-																					image: nil)
-			}
-		}
-		articles = articleManager.getAllArticles()
+	private func addTestArticles() {
+		guard let article1 = articleManager.newArticle(title: "Test1",
+																									 content: "And this is how it goes: <some story>",
+																									 language: "en", image: nil),
+					let article2 = articleManager.newArticle(title: "Test2",
+																									 content: "London is a capital of Great Britain",
+																									 language: "ru", image: nil),
+					let article3 = articleManager.newArticle(title: "Article1",
+																									 content: "pen and pencil",
+																									 language: "en", image: nil) else { return }
+		articles = [article1, article2, article3]
 		tableView.reloadData()
 	}
-
 }
 
 // MARK: - UITableViewDelegate Extension
@@ -165,12 +160,12 @@ extension ArticlesViewController: UISearchBarDelegate {
 			loadAllArticles()
 			return
 		}
-		articles = articleManager.getArticles(contain: searchPhrase)
+		articles = articleManager.getArticles(contains: searchPhrase)
 		if articles.isEmpty {
 			articles = articleManager.getArticle(byTitle: searchPhrase)
 		}
 		if articles.isEmpty {
-			articles = articleManager.getArticles(inLanguage: searchPhrase)
+			articles = articleManager.getArticles(byLanguage: searchPhrase)
 		}
 		tableView.reloadData()
 	}

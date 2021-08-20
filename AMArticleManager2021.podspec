@@ -10,6 +10,6 @@ Pod::Spec.new do |s|
   s.ios.deployment_target = '12.0'
   s.source_files = 'Source/*.swift'
 	s.resources = 'Source/Article.xcdatamodeld'
-	s.frameworks = 'CoreData'
+	s.frameworks = 'CoreData', 'UIKit'
 	s.swift_versions = '5'
 end

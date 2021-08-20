@@ -1,6 +1,6 @@
 //
 //  ArticleManager.swift
-//  AntonM2021_Example
+//  AMArticleManager2021
 //
 //  Created by MSQUARDIAN on 8/12/21.
 //  Copyright © 2021 CocoaPods. All rights reserved.
@@ -11,7 +11,7 @@ import UIKit
 
 // MARK: - Article FetchKeys
 
-enum articleFetchKeys: String {
+enum ArticleFetchKeys: String {
 	case title
 	case content
 	case language
@@ -28,6 +28,7 @@ public class ArticleManager {
 	// MARK: - Private Properties
 	
 	private var managedObjectContext: NSManagedObjectContext
+	let request: NSFetchRequest<Article> = Article.fetchRequest()
 	
 	// MARK: - Private Initializers
 	
@@ -68,19 +69,19 @@ public class ArticleManager {
 	
 	public func getAllArticles() -> [Article] {
 		
-		return fetchRequest(key: nil, value: nil)
+		return fetchRequest(key: nil, value: nil) ?? []
 	}
 	
-	public func getArticles(inLanguage language: String) -> [Article] {
-		return fetchRequest(key: .language, value: language)
+	public func getArticles(byLanguage language: String) -> [Article] {
+		return fetchRequest(key: .language, value: language) ?? []
 	}
 	
 	public func getArticle(byTitle title: String) -> [Article] {
-		return fetchRequest(key: .title, value: title)
+		return fetchRequest(key: .title, value: title) ?? []
 	}
 	
-	public func getArticles(contain str: String) -> [Article] {
-		return fetchRequest(key: .content, value: str)
+	public func getArticles(contains string: String) -> [Article] {
+		return fetchRequest(key: .content, value: string) ?? []
 	}
 	
 	public func remove(article: Article) {
@@ -100,14 +101,13 @@ public class ArticleManager {
 	
 	// MARK: - Private Methods
 	
-	private func fetchRequest(key: articleFetchKeys?, value: String?) -> [Article] {
-		let request: NSFetchRequest<Article> = Article.fetchRequest()
+	private func fetchRequest(key: ArticleFetchKeys?, value: String?) -> [Article]? {
 		if let key = key, let value = value {
 			request.predicate = NSPredicate(format: key.rawValue + Const.ArticleManager.predicateContainSuffix, value)
 		}
 		guard let result = try? managedObjectContext.fetch(request) else {
 			debugPrint(Const.ArticleManager.fetchRequestFailMessage)
-			return []
+			return nil
 		}
 		return result
 	}
