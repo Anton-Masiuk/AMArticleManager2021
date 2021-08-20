@@ -1,11 +1,29 @@
-# Stage 1
+# Masiuk2021
 
-<img src="https://img.shields.io/badge/iOS-000000?style=for-the-badge&logo=ios&logoColor=white" />
-<img src="https://img.shields.io/badge/Swift-FA7343?style=for-the-badge&logo=swift&logoColor=white" />
-<img src="https://img.shields.io/badge/Google%20Sheets-34A853?style=for-the-badge&logo=google-sheets&logoColor=white" /> 
+[![CI Status](https://img.shields.io/travis/Anton Masiuk/Masiuk2021.svg?style=flat)](https://travis-ci.org/Anton Masiuk/Masiuk2021)
+[![Version](https://img.shields.io/cocoapods/v/Masiuk2021.svg?style=flat)](https://cocoapods.org/pods/Masiuk2021)
+[![License](https://img.shields.io/cocoapods/l/Masiuk2021.svg?style=flat)](https://cocoapods.org/pods/Masiuk2021)
+[![Platform](https://img.shields.io/cocoapods/p/Masiuk2021.svg?style=flat)](https://cocoapods.org/pods/Masiuk2021)
 
-### Useful links:
+## Example
 
-- [Exercises](https://drive.google.com/drive/u/1/folders/13Kp14CsyYY8pQ-_jmmu-R8qs7lSALqqf)
-- [Grading Diary](https://docs.google.com/spreadsheets/d/15jSBOjso89syFY-mdc8A1oRVrig_gqLJPPms6gOPjFs/edit#gid=0)
-- [Gantt Chart](https://docs.google.com/spreadsheets/u/1/d/1K7S-uzZjCQmyXEzlSDQp8qg8DD-OgyzBIVKiwzeuZVc/edit?usp=drive_web&ouid=111964802423031011047)
+To run the example project, clone the repo, and run `pod install` from the Example directory first.
+
+## Requirements
+
+## Installation
+
+Masiuk2021 is available through [CocoaPods](https://cocoapods.org). To install
+it, simply add the following line to your Podfile:
+
+```ruby
+pod 'Masiuk2021'
+```
+
+## Author
+
+Anton Masiuk, anton.masiuk@codeit.pro
+
+## License
+
+Masiuk2021 is available under the MIT license. See the LICENSE file for more info.
