@@ -104,6 +104,8 @@ public class ArticleManager {
 	private func fetchRequest(key: ArticleFetchKeys?, value: String?) -> [Article]? {
 		if let key = key, let value = value {
 			request.predicate = NSPredicate(format: key.rawValue + Const.ArticleManager.predicateContainSuffix, value)
+		} else {
+			request.predicate = nil
 		}
 		guard let result = try? managedObjectContext.fetch(request) else {
 			debugPrint(Const.ArticleManager.fetchRequestFailMessage)
