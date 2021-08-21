@@ -59,7 +59,7 @@ public class ArticleManager {
 		article.language = language
 		article.creationDate = Date()
 		article.modificationDate = nil
-		if let imageData = image?.pngData() {
+		if let imageData = image?.jpegData(compressionQuality: 0.8) {
 			article.imageData = imageData
 		}
 		save()
