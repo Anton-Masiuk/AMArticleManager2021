@@ -28,7 +28,7 @@ public class ArticleManager {
 	// MARK: - Private Properties
 	
 	private var managedObjectContext: NSManagedObjectContext
-	let request: NSFetchRequest<Article> = Article.fetchRequest()
+	private let request: NSFetchRequest<Article> = Article.fetchRequest()
 	
 	// MARK: - Private Initializers
 	
