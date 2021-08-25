@@ -51,9 +51,10 @@ public class ArticleManager {
 	// MARK: - Public Methods
 	
 	public func newArticle(title: String, content: String, language: String, image: UIImage?) -> Article? {
-		guard let article = NSEntityDescription.insertNewObject(forEntityName: Const.ArticleManager.articleModelName,
-																														into: managedObjectContext) as? Article,
-					getArticle(byTitle: title).isEmpty else { return nil }
+		guard getArticle(byTitle: title).isEmpty,
+					let article = NSEntityDescription.insertNewObject(forEntityName: Const.ArticleManager.articleModelName,
+																														into: managedObjectContext) as? Article
+		else { return nil }
 		article.title = title
 		article.content = content
 		article.language = language
@@ -66,16 +67,16 @@ public class ArticleManager {
 		return article
 	}
 	
-	public func update(article: Article, withTitle title: String, withContent content: String, withLanguage language: String, withImage image: UIImage?) {
-		guard let article = NSEntityDescription.insertNewObject(forEntityName: Const.ArticleManager.articleModelName,
-																														into: managedObjectContext) as? Article,
-					!getArticle(byTitle: title).isEmpty else { return }
-		article.title = title
-		article.content = content
-		article.language = language
-		article.modificationDate = Date()
+	public func update(article: Article, withTitle title: String, withContent content: String,
+										 withLanguage language: String, withImage image: UIImage?) {
+		guard let articleTitle = article.title else { return }
+		guard let updatingArticle = getArticle(byTitle: articleTitle).first else { return }
+		updatingArticle.setValuesForKeys(["title": title,
+																			"content": content,
+																			"language": language,
+																			"modificationDate": NSDate()])
 		if let imageData = image?.jpegData(compressionQuality: 0.8) {
-			article.imageData = imageData
+			updatingArticle.setValue(imageData, forKey: "imageData")
 		}
 		save()
 	}
