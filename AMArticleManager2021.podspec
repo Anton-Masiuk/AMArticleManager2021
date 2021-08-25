@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'AMArticleManager2021'
-  s.version          = '0.1.0'
+  s.version          = '0.1.1'
   s.summary          = 'Article manager'
 	s.author           = { 'Anton Masiuk' => 'anton.masiuk@codeit.pro' }
   s.homepage         = 'https://github.com/Anton-Masiuk/AMArticleManager2021'
