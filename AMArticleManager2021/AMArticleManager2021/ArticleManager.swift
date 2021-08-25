@@ -66,6 +66,19 @@ public class ArticleManager {
 		return article
 	}
 	
+	public func update(article: Article, withTitle title: String, withContent content: String, withLanguage language: String, withImage image: UIImage?) {
+		guard let article = NSEntityDescription.insertNewObject(forEntityName: Const.ArticleManager.articleModelName,
+																														into: managedObjectContext) as? Article,
+					!getArticle(byTitle: title).isEmpty else { return }
+		article.title = title
+		article.content = content
+		article.language = language
+		article.modificationDate = Date()
+		if let imageData = image?.jpegData(compressionQuality: 0.8) {
+			article.imageData = imageData
+		}
+		save()
+	}
 	
 	public func getAllArticles() -> [Article] {
 		
